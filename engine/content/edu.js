@@ -1,0 +1,26 @@
+// Educational posts (branded, polished style). Full ayat pulled from the dataset.
+// verses: ['S:A', ...] full verses shown; tr: translation lines verified against Sahih International.
+module.exports = [
+{ id: 'e-al-ikhlas', verses: ['112:1'], tr: [['112:1', 'Say, "He is Allah, who is One']],
+  hook: 'You probably recite this <em>every single day.</em>', insight: 'Al-Ikhlas means "sincerity." The Prophet ﷺ said this surah is equal to a third of the Quran.',
+  caption: 'Save this and think of it next time you recite Al-Ikhlas 📌' },
+{ id: 'e-lord-of-the-worlds', verses: ['1:2'], tr: [['1:2', 'All praise is due to Allah, Lord of the worlds']],
+  hook: 'The first thing you say in Al-Fatiha, <em>explained.</em>', insight: '"Al-\'alamin" is plural. Not Lord of one world. Lord of all the worlds: everything that exists.',
+  caption: 'Understanding Al-Fatiha, one ayah at a time 📌' },
+{ id: 'e-guide-us', verses: ['1:6'], tr: [['1:6', 'Guide us to the straight path']],
+  hook: 'Why do we ask for guidance <em>17 times a day?</em>', insight: 'Even while you are already praying, you ask to be guided. Guidance isn\'t a one-time thing. You need it every single day.',
+  caption: 'The dua inside every rakah 📌' },
+{ id: 'e-al-asr', verses: ['103:1', '103:2', '103:3'],
+  tr: [['103:1', 'By time'], ['103:2', 'Indeed, mankind is in loss'], ['103:3', 'Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience']],
+  hook: 'A whole life philosophy in <em>3 ayat.</em>', insight: 'Imam ash-Shafi\'i is reported to have said that if people reflected on this surah alone, it would be enough for them.',
+  caption: 'Surah Al-Asr: short, but it says everything 📌' },
+{ id: 'e-al-kawthar', verses: ['108:1'], tr: [['108:1', 'Indeed, We have granted you, O Muhammad, al-Kawthar']],
+  hook: 'The <em>shortest surah</em> in the Quran.', insight: 'Al-Kawthar has only 3 ayat. Al-Kawthar is described in hadith as a river in Paradise given to the Prophet ﷺ.',
+  caption: 'Learn the meaning of the shortest surah 📌' },
+{ id: 'e-day-of-recompense', verses: ['1:4'], tr: [['1:4', 'Sovereign of the Day of Recompense']],
+  hook: 'Notice what comes right after <em>mercy</em> in Al-Fatiha.', insight: 'First "the Entirely Merciful, the Especially Merciful", then "Sovereign of the Day of Recompense." Hope and accountability, side by side.',
+  caption: 'The balance inside Al-Fatiha 📌' },
+{ id: 'e-al-falaq', verses: ['113:1'], tr: [['113:1', 'Say, "I seek refuge in the Lord of daybreak']],
+  hook: 'The surah you recite for <em>protection</em>, explained.', insight: 'Al-Falaq and An-Nas are known together as al-Mu\'awwidhatayn: the two surahs of seeking refuge.',
+  caption: 'Know what you\'re saying when you seek protection 📌' },
+];

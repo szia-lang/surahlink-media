@@ -1,0 +1,114 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:transparent;font-family:Inter,sans-serif}
+.s{width:1080px;height:1920px;position:relative;overflow:hidden;margin-bottom:20px}
+.ig .s{height:1350px}
+canvas{position:absolute;inset:0;width:100%;height:100%}
+.txt{position:absolute;left:110px;right:110px;top:44%;transform:translateY(-50%);text-align:center;color:#fff;font-weight:600;font-size:56px;line-height:1.3;text-shadow:0 2px 12px rgba(0,0,0,.6),0 0 2px rgba(0,0,0,.45)}
+.ig .txt{top:47%}
+.txt p+p{margin-top:34px}
+.ar{font-family:'Amiri Quran',Amiri,serif;font-weight:400;font-size:1.4em;line-height:1.6;text-shadow:0 2px 14px rgba(0,0,0,.75),0 0 3px rgba(0,0,0,.6)}
+.big .ar{font-size:96px}
+.ref{font-size:36px;font-weight:500;opacity:.85}
+.soft{font-size:40px;font-weight:500;opacity:.9}
+.wm{position:absolute;left:0;right:0;top:72%;text-align:center;color:#fff;opacity:.6;font-size:26px;font-weight:500;letter-spacing:.02em;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.ig .wm{top:84%}
+</style></head><body><div id="root"></div>
+<script>
+// ---------- scene painters ----------
+function rng(seed){return()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646}}
+function noise1(seed){const r=rng(seed),v=[];for(let i=0;i<512;i++)v.push(r());return x=>{const i=Math.floor(x),f=x-i,t=f*f*(3-2*f);return v[i&511]*(1-t)+v[(i+1)&511]*t}}
+function grain(ctx,w,h,amt,seed){const d=ctx.getImageData(0,0,w,h),p=d.data,r=rng(seed);for(let i=0;i<p.length;i+=4){const g=(r()-.5)*amt;p[i]+=g;p[i+1]+=g;p[i+2]+=g}ctx.putImageData(d,0,0)}
+function vignette(ctx,w,h,a){const g=ctx.createRadialGradient(w/2,h*.45,h*.2,w/2,h*.45,h*.8);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,`rgba(0,0,0,${a})`);ctx.fillStyle=g;ctx.fillRect(0,0,w,h)}
+
+// draped fabric: light linen top, deep colored fabric below
+function fabric(ctx,w,h,seed,top,bottom,split){
+ const d=ctx.createImageData(w,h),p=d.data,n1=noise1(seed),n2=noise1(seed+7),n3=noise1(seed+13);
+ for(let y=0;y<h;y++){const edge=h*split+ (n1(y*0+0)*0)+0;
+  for(let x=0;x<w;x++){
+   const b=h*split+(n3(x/180)-.5)*160;const isTop=y<b;
+   const col=isTop?top:bottom;
+   // folds: diagonal soft ridges warped by noise
+   const u=isTop? x/w*2.2 + y/h*.6 + n1(y/520+x/900)*1.1 : x/w*1.8 - y/h*1.3 + n2(x/420+y/700)*1.6;
+   let s=.5+.5*Math.sin(u*Math.PI*2+n2(y/380)*1.2);s=Math.pow(s,1.6);
+   let shade=(isTop?.80:.62)+s*(isTop?.24:.5);
+   // crease shadow along the boundary
+   const dist=Math.abs(y-b);if(!isTop&&dist<70)shade*=.55+.45*(dist/70);if(isTop&&dist<40)shade*=.85+.15*(dist/40);
+   // light falloff
+   shade*=1-.25*(y/h);
+   const i=(y*w+x)*4;p[i]=col[0]*shade;p[i+1]=col[1]*shade;p[i+2]=col[2]*shade;p[i+3]=255}}
+ ctx.putImageData(d,0,0);
+ {const t=document.createElement('canvas');t.width=w;t.height=h;t.getContext('2d').drawImage(ctx.canvas,0,0);ctx.filter='blur(5px)';ctx.drawImage(t,0,0);ctx.filter='none';}
+ // weave texture
+ ctx.globalAlpha=.05;ctx.fillStyle='#000';for(let y=0;y<h;y+=3)ctx.fillRect(0,y,w,1);ctx.globalAlpha=1;
+ grain(ctx,w,h,22,seed);vignette(ctx,w,h,.35);
+ ctx.fillStyle='rgba(0,0,0,.3)';ctx.fillRect(0,0,w,h);
+}
+
+// night street bokeh
+function city(ctx,w,h,seed){const r=rng(seed);
+ let g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'#0d1424');g.addColorStop(.45,'#1d1f2c');g.addColorStop(1,'#2b2018');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+ // building blocks
+ ctx.fillStyle='#120f12';for(let i=0;i<7;i++){const bw=120+r()*220,bx=i*170-60,bh=h*(.35+r()*.3);ctx.fillRect(bx,h-bh,bw,bh)}
+ // lit windows
+ for(let i=0;i<90;i++){const x=r()*w,y=h*(.35+r()*.45);ctx.fillStyle=`rgba(255,${190+r()*40|0},${110+r()*50|0},${.12+r()*.3})`;ctx.fillRect(x,y,10+r()*14,14+r()*16)}
+ // bokeh layers
+ ctx.globalCompositeOperation='lighter';
+ for(const [count,rad,blur,al] of [[60,10,4,.55],[45,30,10,.32],[22,70,18,.18]]){ctx.filter=`blur(${blur}px)`;
+  for(let i=0;i<count;i++){const x=r()*w,y=h*(.15+r()*.75),rr=rad*(.6+r()*.8);const warm=r()<.85;
+   ctx.fillStyle=warm?`rgba(255,${180+r()*50|0},${100+r()*60|0},${al})`:`rgba(170,200,255,${al})`;ctx.beginPath();ctx.arc(x,y,rr,0,7);ctx.fill()}}
+ ctx.filter='none';ctx.globalCompositeOperation='source-over';
+ // tree branches silhouette
+ ctx.strokeStyle='rgba(8,6,6,.85)';ctx.lineCap='round';
+ const branch=(x,y,a,len,wd,dep)=>{if(dep==0||len<8)return;const x2=x+Math.cos(a)*len,y2=y+Math.sin(a)*len;ctx.lineWidth=wd;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x2,y2);ctx.stroke();
+  branch(x2,y2,a-.35-r()*.3,len*.72,wd*.68,dep-1);branch(x2,y2,a+.3+r()*.3,len*.7,wd*.68,dep-1)};
+ branch(w*.92,h,-Math.PI/2-.25,h*.2,30,9);
+ // wet ground reflection
+ g=ctx.createLinearGradient(0,h*.82,0,h);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.6)');ctx.fillStyle=g;ctx.fillRect(0,h*.82,w,h*.18);
+ grain(ctx,w,h,26,seed);vignette(ctx,w,h,.5);ctx.fillStyle='rgba(0,0,0,.18)';ctx.fillRect(0,0,w,h)}
+
+// golden hour mosque silhouette
+function mosque(ctx,w,h,seed,o={}){
+ let g=ctx.createLinearGradient(0,0,0,h);const sk=o.sky==='blue'?['#0e1a33','#2c3f66','#6f7fa3','#c9a98e','#e8c9a0']:['#2a3350','#9a6f6a','#e7a65e','#f3c98a','#f6d9a4'];[0,.35,.58,.7,1].forEach((t,i)=>g.addColorStop(t,sk[i]));ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+ // sun glow
+ const sy=h*.66;let rg=ctx.createRadialGradient(w*.5,sy,10,w*.5,sy,h*.45);rg.addColorStop(0,'rgba(255,240,200,.95)');rg.addColorStop(.15,'rgba(255,214,150,.5)');rg.addColorStop(1,'rgba(255,200,140,0)');ctx.fillStyle=rg;ctx.fillRect(0,0,w,h);
+ // soft clouds
+ const r=rng(seed);ctx.filter='blur(30px)';for(let i=0;i<14;i++){ctx.fillStyle=`rgba(255,${200+r()*40|0},${190+r()*30|0},${.12+r()*.15})`;ctx.beginPath();ctx.ellipse(r()*w,h*(.12+r()*.35),200+r()*260,30+r()*40,0,0,7);ctx.fill()}ctx.filter='none';
+ // silhouette
+ ctx.fillStyle='#1c1418';const base=h*.8;
+ ctx.fillRect(0,base,w,h-base);
+ ctx.fillRect(w*.2,base-170,w*.6,170);
+ ctx.beginPath();ctx.moveTo(w*.33,base-170);ctx.bezierCurveTo(w*.33,base-430,w*.67,base-430,w*.67,base-170);ctx.fill();
+ ctx.fillRect(w*.497,base-470,6,70);ctx.beginPath();ctx.arc(w*.5,base-478,10,0,7);ctx.fill();
+ for(const sx of [.24,.76]){ctx.beginPath();ctx.moveTo(w*sx-70,base-170);ctx.bezierCurveTo(w*sx-70,base-300,w*sx+70,base-300,w*sx+70,base-170);ctx.fill()}
+ for(const mx of [.08,.92]){ctx.fillRect(w*mx-18,base-640,36,640);ctx.fillRect(w*mx-28,base-470,56,18);ctx.fillRect(w*mx-26,base-300,52,16);ctx.beginPath();ctx.moveTo(w*mx-20,base-640);ctx.lineTo(w*mx,base-720);ctx.lineTo(w*mx+20,base-640);ctx.fill()}
+ // arches glow
+ ctx.fillStyle='rgba(255,190,110,.55)';for(let i=0;i<6;i++){const ax=w*.27+i*w*.085;ctx.beginPath();ctx.moveTo(ax,base-10);ctx.lineTo(ax,base-80);ctx.arc(ax+22,base-80,22,Math.PI,0);ctx.lineTo(ax+44,base-10);ctx.fill()}
+ grain(ctx,w,h,24,seed);vignette(ctx,w,h,.45);ctx.fillStyle='rgba(0,0,0,.2)';ctx.fillRect(0,0,w,h)}
+
+// desert under stars
+function desert(ctx,w,h,seed){const r=rng(seed);
+ let g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'#05070f');g.addColorStop(.5,'#141a33');g.addColorStop(.72,'#3a3048');g.addColorStop(1,'#1a1210');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+ // milky way band
+ ctx.filter='blur(40px)';ctx.fillStyle='rgba(200,190,230,.18)';ctx.save();ctx.translate(w/2,h*.35);ctx.rotate(-.5);ctx.beginPath();ctx.ellipse(0,0,w*.9,120,0,0,7);ctx.fill();ctx.restore();ctx.filter='none';
+ for(let i=0;i<900;i++){const s=r()*r()*2.6+.3;ctx.fillStyle=`rgba(255,${235+r()*20|0},${220+r()*35|0},${.3+r()*.7})`;ctx.beginPath();ctx.arc(r()*w,r()*h*.72,s,0,7);ctx.fill()}
+ // crescent moon
+ {const m=document.createElement('canvas');m.width=300;m.height=300;const mc=m.getContext('2d');mc.fillStyle='#f6ecd0';mc.beginPath();mc.arc(150,150,46,0,7);mc.fill();mc.globalCompositeOperation='destination-out';mc.beginPath();mc.arc(170,136,42,0,7);mc.fill();
+  ctx.save();ctx.shadowColor='rgba(255,240,200,.85)';ctx.shadowBlur=45;ctx.drawImage(m,w*.74-150,h*.18-150);ctx.restore();}
+ // dunes
+ const dune=(y0,amp,col,ph)=>{ctx.fillStyle=col;ctx.beginPath();ctx.moveTo(0,h);for(let x=0;x<=w;x+=10)ctx.lineTo(x,y0+Math.sin(x/w*Math.PI*1.3+ph)*amp+Math.sin(x/w*7+ph)*amp*.15);ctx.lineTo(w,h);ctx.fill()};
+ dune(h*.74,50,'#3b2a2a',0.4);dune(h*.8,70,'#2a1c1b',2);dune(h*.88,60,'#170f0e',4.1);
+ grain(ctx,w,h,22,seed);vignette(ctx,w,h,.45)}
+
+const painters={
+ fabric:(c,w,h,sd,o)=>fabric(c,w,h,sd,o.top||[236,229,214],o.bottom||[118,28,40],o.split||.5),
+ mosque,city,desert};
+const P=window.POST;const H=P.h||1920;const root=document.getElementById('root');
+if(H!==1920)document.body.classList.add('ig');
+P.slides.forEach((c,i)=>{const s=document.createElement('section');s.className='s';
+ if(!P.clear){const cv=document.createElement('canvas');cv.width=1080;cv.height=H;s.appendChild(cv);painters[P.bg.type](cv.getContext('2d'),1080,H,(P.seed||1234)+i*977,P.bg)}
+ s.insertAdjacentHTML('beforeend',`<div class="txt">${c}</div>`);root.appendChild(s)});
+window.READY=true;
+</script></body></html>

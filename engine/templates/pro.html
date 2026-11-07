@@ -1,0 +1,84 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F0;--card:#FFFFFF;--ink:#16211F;--muted:#5E6B67;--green:#0E6B57;--green-soft:#E3EFEA;--gold:#C29A4E;--line:#E8E1D2;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ccc;font-family:Inter,sans-serif;color:var(--ink)}
+.slide{width:1080px;height:1350px;background:var(--bg);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:110px 100px 0;margin-bottom:20px}
+.tt .slide{height:1920px;padding:230px 120px 0 100px}
+.slide.dark{background:var(--green);color:#F6F1E4}
+.pattern{position:absolute;right:-140px;top:-140px;width:520px;height:520px;opacity:.5}
+.dark .pattern{opacity:.18}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;gap:44px;position:relative;z-index:1}
+.tt .content{gap:56px}
+.kicker{font-weight:600;font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.dark .kicker{color:var(--gold)}
+h1{font-family:Fraunces,serif;font-weight:600;font-size:96px;line-height:1.05;letter-spacing:-.02em}
+h1.xl{font-size:118px}
+h2{font-family:Fraunces,serif;font-weight:600;font-size:76px;line-height:1.1;letter-spacing:-.015em}
+em{font-style:italic;color:var(--green)}
+.dark em{color:var(--gold)}
+p.body{font-size:40px;line-height:1.45;color:var(--muted);max-width:860px}
+.dark p.body{color:#D5E3DC}
+.num{font-family:Fraunces,serif;font-size:220px;font-weight:700;color:var(--green);line-height:.9;letter-spacing:-.03em}
+.stat{display:flex;align-items:baseline;gap:30px;border-top:2px solid var(--line);padding-top:30px}
+.stat b{font-family:Fraunces,serif;font-size:110px;color:var(--green);font-weight:700;letter-spacing:-.02em;min-width:330px}
+.stat span{font-size:36px;color:var(--muted);line-height:1.35}
+.verse{background:var(--card);border:2px solid var(--line);border-radius:36px;padding:56px 50px;display:flex;flex-direction:column;gap:36px}
+.ar{font-family:'Amiri Quran',Amiri,serif;direction:rtl;text-align:center;font-size:84px;line-height:1.6;color:var(--ink)}
+.words{display:flex;flex-direction:row-reverse;flex-wrap:wrap;justify-content:center;gap:18px}
+.w{background:var(--green-soft);border-radius:22px;padding:18px 24px;text-align:center;min-width:170px}
+.w .a{font-family:Amiri,serif;font-size:56px;line-height:1.3;color:var(--ink)}
+.w .e{font-size:28px;font-weight:600;color:var(--green);margin-top:4px}
+.trans{font-family:Fraunces,serif;font-style:italic;font-size:40px;text-align:center;line-height:1.35}
+.ref{text-align:center;font-size:26px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.tip{display:flex;align-items:center;gap:28px}
+.badge{width:110px;height:110px;border-radius:50%;background:var(--green);color:#fff;font-family:Fraunces,serif;font-size:58px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.steps{display:flex;flex-direction:column;gap:30px}
+.step{display:flex;gap:30px;align-items:flex-start;background:var(--card);border:2px solid var(--line);border-radius:30px;padding:36px}
+.step .badge{width:84px;height:84px;font-size:44px}
+.step h3{font-size:42px;font-weight:700;margin-bottom:8px}
+.step p{font-size:32px;color:var(--muted);line-height:1.4}
+.list{display:flex;flex-direction:column;gap:26px;list-style:none}
+.list li{font-size:42px;line-height:1.35;padding-left:64px;position:relative}
+.list li:before{content:"";position:absolute;left:0;top:14px;width:30px;height:30px;border-radius:50%;background:var(--green-soft);border:6px solid var(--green)}
+.cta{display:inline-flex;align-items:center;gap:22px;background:var(--ink);color:#fff;border-radius:999px;padding:34px 56px;font-size:40px;font-weight:600;align-self:flex-start}
+.dark .cta{background:#F6F1E4;color:var(--green)}
+.cta small{display:block;font-size:24px;font-weight:500;opacity:.75;letter-spacing:.04em}
+.actions{display:flex;gap:20px;flex-wrap:wrap}
+.chip{border:2px solid currentColor;border-radius:999px;padding:16px 30px;font-size:30px;font-weight:600;opacity:.9}
+.phone{width:440px;height:840px;border-radius:70px;background:var(--ink);padding:18px;align-self:center;box-shadow:0 40px 80px rgba(22,33,31,.18)}
+.tt .phone{width:520px;height:1000px}
+.screen{width:100%;height:100%;border-radius:54px;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:40px}
+.screen .sm{font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.screen .card{background:#fff;border-radius:32px;border:2px solid var(--line);width:100%;padding:50px 20px;text-align:center}
+.screen .card .a{font-family:Amiri,serif;font-size:110px;line-height:1.3}
+.screen .card .e{font-family:Fraunces,serif;font-size:44px;color:var(--green);font-weight:600}
+.screen .bar{width:100%;height:14px;border-radius:7px;background:var(--line);overflow:hidden}
+.screen .bar i{display:block;width:64%;height:100%;background:var(--green)}
+.screen .btn{background:var(--green);color:#fff;border-radius:999px;padding:20px 50px;font-size:26px;font-weight:600}
+.row{display:flex;gap:50px;align-items:center}
+footer{height:150px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid var(--line);font-size:28px;font-weight:600;position:relative;z-index:1}
+.tt footer{height:420px;align-items:flex-start;padding-top:44px}
+.dark footer{border-color:rgba(255,255,255,.18)}
+.brand{display:flex;align-items:center;gap:14px;font-size:32px;font-weight:700;letter-spacing:-.01em}
+.brand svg{width:40px;height:40px}
+.meta{display:flex;gap:30px;color:var(--muted);align-items:center}
+.dark .meta{color:#BFD3CA}
+.swipe{color:var(--green)}
+.dark .swipe{color:var(--gold)}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+const star=(c)=>`<svg viewBox="0 0 100 100"><g fill="none" stroke="${c}" stroke-width="5"><rect x="22" y="22" width="56" height="56"/><rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)"/></g><circle cx="50" cy="50" r="9" fill="${c}"/></svg>`;
+const pattern=(c)=>{let s='';for(let i=0;i<5;i++){const r=40+i*48;s+=`<rect x="${260-r}" y="${260-r}" width="${2*r}" height="${2*r}" /><rect x="${260-r}" y="${260-r}" width="${2*r}" height="${2*r}" transform="rotate(45 260 260)"/>`}return `<svg class="pattern" viewBox="0 0 520 520"><g fill="none" stroke="${c}" stroke-width="2">${s}</g></svg>`};
+const W=(a,e)=>`<div class="w"><div class="a">${a}</div><div class="e">${e}</div></div>`;
+const CTA=`<div class="cta"><div><small>DOWNLOAD ON THE</small>App Store</div><span>→</span></div>`;
+
+const P=window.POST;document.body.classList.add('tt');
+document.getElementById('root').innerHTML=P.slides.map((s,i)=>`<section class="slide ${s.dark?'dark':''}">${pattern(s.dark?'#C29A4E':'#E3D7BC')}<div class="content">${s.c}</div>
+<footer><div class="brand">${star(s.dark?'#C29A4E':'#0E6B57')}SurahLink</div><div class="meta"><span>${i+1}/${P.slides.length}</span>${i===P.slides.length-1?'':'<span class="swipe">Swipe →</span>'}</div></footer></section>`).join('');
+window.READY=true;
+</script></body></html>
