@@ -16,6 +16,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%}
 .wm{position:absolute;left:0;right:0;top:72%;text-align:center;color:#fff;opacity:.6;font-size:26px;font-weight:500;letter-spacing:.02em;text-shadow:0 1px 4px rgba(0,0,0,.5)}
 .ig .wm{top:84%}
 </style></head><body><div id="root"></div>
+<script src="scenes2.js"></script>
 <script>
 // ---------- scene painters ----------
 function rng(seed){return()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646}}
@@ -104,7 +105,7 @@ function desert(ctx,w,h,seed){const r=rng(seed);
 
 const painters={
  fabric:(c,w,h,sd,o)=>fabric(c,w,h,sd,o.top||[236,229,214],o.bottom||[118,28,40],o.split||.5),
- mosque,city,desert};
+ mosque,city,desert,rain,candle,ocean,mountains,prayerMat,windowLight};
 const P=window.POST;const H=P.h||1920;const root=document.getElementById('root');
 if(H!==1920)document.body.classList.add('ig');
 P.slides.forEach((c,i)=>{const s=document.createElement('section');s.className='s';

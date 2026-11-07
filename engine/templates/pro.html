@@ -10,6 +10,7 @@ body{background:#ccc;font-family:Inter,sans-serif;color:var(--ink)}
 .slide.dark{background:var(--green);color:#F6F1E4}
 .pattern{position:absolute;right:-140px;top:-140px;width:520px;height:520px;opacity:.5}
 .dark .pattern{opacity:.18}
+.kicker,.num,.stat b,em,.badge,.swipe{}
 .content{flex:1;display:flex;flex-direction:column;justify-content:center;gap:44px;position:relative;z-index:1}
 .tt .content{gap:56px}
 .kicker{font-weight:600;font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
@@ -78,6 +79,10 @@ const W=(a,e)=>`<div class="w"><div class="a">${a}</div><div class="e">${e}</div
 const CTA=`<div class="cta"><div><small>DOWNLOAD ON THE</small>App Store</div><span>→</span></div>`;
 
 const P=window.POST;document.body.classList.add('tt');
+const TH={green:{},sand:{'--bg':'#F5EFE6','--green':'#7A4E2D','--green-soft':'#EFE2D2','--gold':'#C08A3E','--line':'#E6DACB'},
+ sky:{'--bg':'#EEF3F6','--green':'#1E4A6E','--green-soft':'#DCE8F1','--gold':'#C29A4E','--line':'#DCE4EA'},
+ rose:{'--bg':'#F8F1EF','--green':'#7A2E3A','--green-soft':'#F1E0E0','--gold':'#C29A4E','--line':'#EDDCD8'}};
+for(const [k,v] of Object.entries(TH[P.theme]||{}))document.documentElement.style.setProperty(k,v);
 document.getElementById('root').innerHTML=P.slides.map((s,i)=>`<section class="slide ${s.dark?'dark':''}">${pattern(s.dark?'#C29A4E':'#E3D7BC')}<div class="content">${s.c}</div>
 <footer><div class="brand">${star(s.dark?'#C29A4E':'#0E6B57')}SurahLink</div><div class="meta"><span>${i+1}/${P.slides.length}</span>${i===P.slides.length-1?'':'<span class="swipe">Swipe →</span>'}</div></footer></section>`).join('');
 window.READY=true;

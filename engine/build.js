@@ -10,6 +10,18 @@ const week = process.argv[2]; if (!week) { console.error('usage: node build.js <
 const OUT = path.join(ROOT, 'docs/media', week); fs.mkdirSync(OUT, { recursive: true });
 const STATE = path.join(__dirname, 'state/used.json');
 const used = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE)) : { growth: [], edu: [], cta: [] };
+used.bgIndex = used.bgIndex || 0; used.themeIndex = used.themeIndex || 0;
+// background rotation for growth posts (no two in a row look alike); theme rotation for edu/cta
+const C_ = { cream: [236, 229, 214], wine: [118, 28, 40], olive: [86, 98, 60], navy: [34, 44, 74], sand: [170, 132, 92], plum: [84, 40, 70] };
+const BGS = [
+  { type: 'fabric', top: C_.cream, bottom: C_.wine }, { type: 'rain' }, { type: 'prayerMat', mat: [38, 62, 52] }, { type: 'ocean' },
+  { type: 'mosque' }, { type: 'candle' }, { type: 'fabric', top: C_.cream, bottom: C_.olive }, { type: 'mountains' },
+  { type: 'city' }, { type: 'windowLight' }, { type: 'prayerMat', mat: [92, 30, 40] }, { type: 'desert' },
+  { type: 'fabric', top: C_.cream, bottom: C_.navy }, { type: 'mosque', sky: 'blue' }, { type: 'rain' }, { type: 'fabric', top: C_.cream, bottom: C_.sand },
+  { type: 'prayerMat', mat: [40, 46, 70] }, { type: 'fabric', top: C_.cream, bottom: C_.plum } ];
+const THEMES = ['green', 'sand', 'sky', 'rose'];
+const nextBg = () => BGS[used.bgIndex++ % BGS.length];
+const nextTheme = () => THEMES[used.themeIndex++ % THEMES.length];
 
 // ---------- Quran helpers ----------
 const verse = ref => { const [s, a] = ref.split(':').map(Number); const v = Q[s - 1] && Q[s - 1].verses[a - 1]; if (!v) throw new Error('bad ref ' + ref); return { ...v, surah: Q[s - 1].transliteration, s, a }; };
@@ -40,7 +52,7 @@ function buildGrowth(p) {
   const slides = p.slides.map(s => s.replace(/\[\[(ar|tr|ref):(\w+)\]\]/g, (_, t, k) => {
     const v = t === 'ar' ? (ar[k] && A(ar[k])) : t === 'tr' ? tr[k] : refs[k]; if (!v) throw new Error(`${p.id}: missing ${t}:${k}`); return v; }));
   const mainRef = refs.main || Object.values(refs)[0];
-  return { id: p.id, type: 'growth', template: 'growth', post: { bg: p.bg, slides, seed: hash(p.id) },
+  return { id: p.id, type: 'growth', template: 'growth', post: { bg: nextBg(), slides, seed: hash(p.id) + used.bgIndex },
     durations: slides.map(s => s.includes('class="ar"') || s.length > 160 ? 4.5 : 3),
     caption: `${p.caption}\n\n${mainRef}\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp`, sound: p.sound };
 }
@@ -58,7 +70,7 @@ function buildEdu(p) {
     { c: `<div class="kicker">Did you know?</div><h2 style="font-size:64px">${p.insight}</h2>` },
     { dark: 1, c: `<div class="kicker">Learn one surah at a time</div><h1>Understand <em>every surah</em> you recite.</h1>${CTA_BTN}<div class="actions"><span class="chip">Save</span><span class="chip">Share</span><span class="chip">Follow for more</span></div>` },
   ];
-  return { id: p.id, type: 'edu', template: 'pro', post: { slides }, durations: [3.5, 4, 5, 5, 3.5],
+  return { id: p.id, type: 'edu', template: 'pro', post: { slides, theme: nextTheme() }, durations: [3.5, 4, 5, 5, 3.5],
     caption: `${p.caption}\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp`, sound: 'calm vocal-only nasheed (keep it low)' };
 }
 function buildCta(p) {
@@ -70,7 +82,7 @@ function buildCta(p) {
     { dark: 1, c: `<div class="kicker">Your first surah is waiting</div><h1>Download SurahLink <em>today.</em></h1>${CTA_BTN}<p class="body">Search "SurahLink" on the App Store, or tap the link in our bio.</p>` },
   ];
   const plain = p.hook.replace(/<[^>]+>/g, '');
-  return { id: p.id, type: 'cta', template: 'pro', post: { slides }, durations: [3.5, 4, 5, 3.5, 4],
+  return { id: p.id, type: 'cta', template: 'pro', post: { slides, theme: nextTheme() }, durations: [3.5, 4, 5, 3.5, 4],
     caption: `${plain}\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp`, sound: 'trending calm voiceover-friendly audio' };
 }
 function hash(s) { let h = 7; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 100000; return h + 1; }
