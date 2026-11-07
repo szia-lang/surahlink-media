@@ -1,7 +1,7 @@
 // Usage: node build.js <weekLabel>   e.g. node build.js 2026-W46
 // Picks the next unused 21 growth / 7 edu / 7 cta posts, verifies all Quran text against the dataset,
-// renders 1080x1920 MP4s into ../docs/media/<week>/ and writes manifest.json there.
-const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
+// renders 1080x1920 JPEG slideshows (TikTok photo mode) into ../docs/media/<week>/ and writes manifest.json there.
+const fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const Q = require('quran-json/dist/quran_en.json');
 
@@ -100,7 +100,6 @@ const plan = order.filter(Boolean);
 // ---------- render ----------
 (async () => {
   const browser = await chromium.launch();
-  const tmp = fs.mkdtempSync(path.join(require('os').tmpdir(), 'sl-'));
   const manifest = [];
   for (let i = 0; i < plan.length; i++) {
     const p = plan[i], name = `${String(i + 1).padStart(2, '0')}-${p.id}`;
@@ -110,16 +109,11 @@ const plan = order.filter(Boolean);
     await page.goto('file://' + path.join(__dirname, 'templates', p.template + '.html'));
     await page.waitForFunction(() => window.READY); await page.waitForLoadState('networkidle'); await page.evaluate(() => document.fonts.ready);
     const els = await page.$$(p.template === 'growth' ? '.s' : '.slide');
-    const list = [];
-    for (let j = 0; j < els.length; j++) { const f = path.join(tmp, `${name}-${j}.png`); await els[j].screenshot({ path: f }); list.push(`file '${f}'\nduration ${p.durations[j] || 3.5}`); }
-    list.push(`file '${path.join(tmp, `${name}-${els.length - 1}.png`)}'`); // concat demuxer quirk: repeat last frame
+    const sdir = path.join(OUT, name); fs.mkdirSync(sdir, { recursive: true });
+    const images = [];
+    for (let j = 0; j < els.length; j++) { const f = `slide-${String(j + 1).padStart(2, '0')}.jpg`; await els[j].screenshot({ path: path.join(sdir, f), type: 'jpeg', quality: 90 }); images.push(`${name}/${f}`); }
     await page.close();
-    const lf = path.join(tmp, name + '.txt'); fs.writeFileSync(lf, list.join('\n'));
-    const mp4 = path.join(OUT, name + '.mp4');
-    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lf,
-      '-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=stereo', '-shortest',
-      '-vf', 'fps=30,format=yuv420p', '-c:v', 'libx264', '-preset', 'medium', '-crf', '24', '-tune', 'stillimage', '-c:a', 'aac', '-b:a', '64k', '-movflags', '+faststart', mp4]);
-    manifest.push({ order: i + 1, day: Math.floor(i / 5) + 1, file: name + '.mp4', id: p.id, type: p.type, caption: p.caption, sound: p.sound });
+    manifest.push({ order: i + 1, day: Math.floor(i / 5) + 1, folder: name, images, id: p.id, type: p.type, caption: p.caption, sound: p.sound });
     console.log('rendered', name);
   }
   await browser.close();

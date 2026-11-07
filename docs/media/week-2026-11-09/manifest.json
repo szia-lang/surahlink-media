@@ -4,7 +4,13 @@
     {
       "order": 1,
       "day": 1,
-      "file": "01-g-one-hardship-two-eases.mp4",
+      "folder": "01-g-one-hardship-two-eases",
+      "images": [
+        "01-g-one-hardship-two-eases/slide-01.jpg",
+        "01-g-one-hardship-two-eases/slide-02.jpg",
+        "01-g-one-hardship-two-eases/slide-03.jpg",
+        "01-g-one-hardship-two-eases/slide-04.jpg"
+      ],
       "id": "g-one-hardship-two-eases",
       "type": "growth",
       "caption": "one hardship, two eases 🤍\n\nAsh-Sharh 94:5\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -13,7 +19,14 @@
     {
       "order": 2,
       "day": 1,
-      "file": "02-e-al-ikhlas.mp4",
+      "folder": "02-e-al-ikhlas",
+      "images": [
+        "02-e-al-ikhlas/slide-01.jpg",
+        "02-e-al-ikhlas/slide-02.jpg",
+        "02-e-al-ikhlas/slide-03.jpg",
+        "02-e-al-ikhlas/slide-04.jpg",
+        "02-e-al-ikhlas/slide-05.jpg"
+      ],
       "id": "e-al-ikhlas",
       "type": "edu",
       "caption": "Save this and think of it next time you recite Al-Ikhlas 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -22,7 +35,13 @@
     {
       "order": 3,
       "day": 1,
-      "file": "03-g-you-say-this-17-times.mp4",
+      "folder": "03-g-you-say-this-17-times",
+      "images": [
+        "03-g-you-say-this-17-times/slide-01.jpg",
+        "03-g-you-say-this-17-times/slide-02.jpg",
+        "03-g-you-say-this-17-times/slide-03.jpg",
+        "03-g-you-say-this-17-times/slide-04.jpg"
+      ],
       "id": "g-you-say-this-17-times",
       "type": "growth",
       "caption": "you say it every salah. now feel it 🤍\n\nAl-Fatihah 1:5\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -31,7 +50,14 @@
     {
       "order": 4,
       "day": 1,
-      "file": "04-c-stop-reciting.mp4",
+      "folder": "04-c-stop-reciting",
+      "images": [
+        "04-c-stop-reciting/slide-01.jpg",
+        "04-c-stop-reciting/slide-02.jpg",
+        "04-c-stop-reciting/slide-03.jpg",
+        "04-c-stop-reciting/slide-04.jpg",
+        "04-c-stop-reciting/slide-05.jpg"
+      ],
       "id": "c-stop-reciting",
       "type": "cta",
       "caption": "Stop reciting words you don't understand.\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -40,7 +66,13 @@
     {
       "order": 5,
       "day": 1,
-      "file": "05-g-he-answers-directly.mp4",
+      "folder": "05-g-he-answers-directly",
+      "images": [
+        "05-g-he-answers-directly/slide-01.jpg",
+        "05-g-he-answers-directly/slide-02.jpg",
+        "05-g-he-answers-directly/slide-03.jpg",
+        "05-g-he-answers-directly/slide-04.jpg"
+      ],
       "id": "g-he-answers-directly",
       "type": "growth",
       "caption": "no \"say\". just: I am near 🤍\n\nAl-Baqarah 2:186\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -49,7 +81,13 @@
     {
       "order": 6,
       "day": 2,
-      "file": "06-g-i-hear-and-i-see.mp4",
+      "folder": "06-g-i-hear-and-i-see",
+      "images": [
+        "06-g-i-hear-and-i-see/slide-01.jpg",
+        "06-g-i-hear-and-i-see/slide-02.jpg",
+        "06-g-i-hear-and-i-see/slide-03.jpg",
+        "06-g-i-hear-and-i-see/slide-04.jpg"
+      ],
       "id": "g-i-hear-and-i-see",
       "type": "growth",
       "caption": "He hears you too 🤍\n\nTaha 20:46\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -58,7 +96,14 @@
     {
       "order": 7,
       "day": 2,
-      "file": "07-e-lord-of-the-worlds.mp4",
+      "folder": "07-e-lord-of-the-worlds",
+      "images": [
+        "07-e-lord-of-the-worlds/slide-01.jpg",
+        "07-e-lord-of-the-worlds/slide-02.jpg",
+        "07-e-lord-of-the-worlds/slide-03.jpg",
+        "07-e-lord-of-the-worlds/slide-04.jpg",
+        "07-e-lord-of-the-worlds/slide-05.jpg"
+      ],
       "id": "e-lord-of-the-worlds",
       "type": "edu",
       "caption": "Understanding Al-Fatiha, one ayah at a time 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -67,7 +112,13 @@
     {
       "order": 8,
       "day": 2,
-      "file": "08-g-within-its-capacity.mp4",
+      "folder": "08-g-within-its-capacity",
+      "images": [
+        "08-g-within-its-capacity/slide-01.jpg",
+        "08-g-within-its-capacity/slide-02.jpg",
+        "08-g-within-its-capacity/slide-03.jpg",
+        "08-g-within-its-capacity/slide-04.jpg"
+      ],
       "id": "g-within-its-capacity",
       "type": "growth",
       "caption": "you can carry this 🤍\n\nAl-Baqarah 2:286\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -76,7 +127,14 @@
     {
       "order": 9,
       "day": 2,
-      "file": "09-c-know-by-heart.mp4",
+      "folder": "09-c-know-by-heart",
+      "images": [
+        "09-c-know-by-heart/slide-01.jpg",
+        "09-c-know-by-heart/slide-02.jpg",
+        "09-c-know-by-heart/slide-03.jpg",
+        "09-c-know-by-heart/slide-04.jpg",
+        "09-c-know-by-heart/slide-05.jpg"
+      ],
       "id": "c-know-by-heart",
       "type": "cta",
       "caption": "You know the Arabic by heart. Now learn what it means.\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -85,7 +143,13 @@
     {
       "order": 10,
       "day": 2,
-      "file": "10-g-hearts-find-rest.mp4",
+      "folder": "10-g-hearts-find-rest",
+      "images": [
+        "10-g-hearts-find-rest/slide-01.jpg",
+        "10-g-hearts-find-rest/slide-02.jpg",
+        "10-g-hearts-find-rest/slide-03.jpg",
+        "10-g-hearts-find-rest/slide-04.jpg"
+      ],
       "id": "g-hearts-find-rest",
       "type": "growth",
       "caption": "the peace you’re looking for 🤍\n\nAr-Ra'd 13:28\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -94,7 +158,13 @@
     {
       "order": 11,
       "day": 3,
-      "file": "11-g-remember-me.mp4",
+      "folder": "11-g-remember-me",
+      "images": [
+        "11-g-remember-me/slide-01.jpg",
+        "11-g-remember-me/slide-02.jpg",
+        "11-g-remember-me/slide-03.jpg",
+        "11-g-remember-me/slide-04.jpg"
+      ],
       "id": "g-remember-me",
       "type": "growth",
       "caption": "you are being remembered 🤍\n\nAl-Baqarah 2:152\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -103,7 +173,14 @@
     {
       "order": 12,
       "day": 3,
-      "file": "12-e-guide-us.mp4",
+      "folder": "12-e-guide-us",
+      "images": [
+        "12-e-guide-us/slide-01.jpg",
+        "12-e-guide-us/slide-02.jpg",
+        "12-e-guide-us/slide-03.jpg",
+        "12-e-guide-us/slide-04.jpg",
+        "12-e-guide-us/slide-05.jpg"
+      ],
       "id": "e-guide-us",
       "type": "edu",
       "caption": "The dua inside every rakah 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -112,7 +189,13 @@
     {
       "order": 13,
       "day": 3,
-      "file": "13-g-still-my-servants.mp4",
+      "folder": "13-g-still-my-servants",
+      "images": [
+        "13-g-still-my-servants/slide-01.jpg",
+        "13-g-still-my-servants/slide-02.jpg",
+        "13-g-still-my-servants/slide-03.jpg",
+        "13-g-still-my-servants/slide-04.jpg"
+      ],
       "id": "g-still-my-servants",
       "type": "growth",
       "caption": "it’s never too late to come back 🤍\n\nAz-Zumar 39:53\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -121,7 +204,14 @@
     {
       "order": 14,
       "day": 3,
-      "file": "14-c-next-salah.mp4",
+      "folder": "14-c-next-salah",
+      "images": [
+        "14-c-next-salah/slide-01.jpg",
+        "14-c-next-salah/slide-02.jpg",
+        "14-c-next-salah/slide-03.jpg",
+        "14-c-next-salah/slide-04.jpg",
+        "14-c-next-salah/slide-05.jpg"
+      ],
       "id": "c-next-salah",
       "type": "cta",
       "caption": "What if your next salah felt different?\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -130,7 +220,13 @@
     {
       "order": 15,
       "day": 3,
-      "file": "15-g-closer-than-jugular.mp4",
+      "folder": "15-g-closer-than-jugular",
+      "images": [
+        "15-g-closer-than-jugular/slide-01.jpg",
+        "15-g-closer-than-jugular/slide-02.jpg",
+        "15-g-closer-than-jugular/slide-03.jpg",
+        "15-g-closer-than-jugular/slide-04.jpg"
+      ],
       "id": "g-closer-than-jugular",
       "type": "growth",
       "caption": "closer than you think 🤍\n\nQaf 50:16\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -139,7 +235,13 @@
     {
       "order": 16,
       "day": 4,
-      "file": "16-g-he-is-sufficient.mp4",
+      "folder": "16-g-he-is-sufficient",
+      "images": [
+        "16-g-he-is-sufficient/slide-01.jpg",
+        "16-g-he-is-sufficient/slide-02.jpg",
+        "16-g-he-is-sufficient/slide-03.jpg",
+        "16-g-he-is-sufficient/slide-04.jpg"
+      ],
       "id": "g-he-is-sufficient",
       "type": "growth",
       "caption": "let Him handle it 🤍\n\nAt-Talaq 65:3\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -148,7 +250,14 @@
     {
       "order": 17,
       "day": 4,
-      "file": "17-e-al-asr.mp4",
+      "folder": "17-e-al-asr",
+      "images": [
+        "17-e-al-asr/slide-01.jpg",
+        "17-e-al-asr/slide-02.jpg",
+        "17-e-al-asr/slide-03.jpg",
+        "17-e-al-asr/slide-04.jpg",
+        "17-e-al-asr/slide-05.jpg"
+      ],
       "id": "e-al-asr",
       "type": "edu",
       "caption": "Surah Al-Asr: short, but it says everything 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -157,7 +266,13 @@
     {
       "order": 18,
       "day": 4,
-      "file": "18-g-not-forsaken.mp4",
+      "folder": "18-g-not-forsaken",
+      "images": [
+        "18-g-not-forsaken/slide-01.jpg",
+        "18-g-not-forsaken/slide-02.jpg",
+        "18-g-not-forsaken/slide-03.jpg",
+        "18-g-not-forsaken/slide-04.jpg"
+      ],
       "id": "g-not-forsaken",
       "type": "growth",
       "caption": "you are not forgotten 🤍\n\nAd-Duhaa 93:3\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -166,7 +281,14 @@
     {
       "order": 19,
       "day": 4,
-      "file": "19-c-five-minutes.mp4",
+      "folder": "19-c-five-minutes",
+      "images": [
+        "19-c-five-minutes/slide-01.jpg",
+        "19-c-five-minutes/slide-02.jpg",
+        "19-c-five-minutes/slide-03.jpg",
+        "19-c-five-minutes/slide-04.jpg",
+        "19-c-five-minutes/slide-05.jpg"
+      ],
       "id": "c-five-minutes",
       "type": "cta",
       "caption": "5 minutes a day to understand the Quran you recite.\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -175,7 +297,13 @@
     {
       "order": 20,
       "day": 4,
-      "file": "20-g-you-will-be-satisfied.mp4",
+      "folder": "20-g-you-will-be-satisfied",
+      "images": [
+        "20-g-you-will-be-satisfied/slide-01.jpg",
+        "20-g-you-will-be-satisfied/slide-02.jpg",
+        "20-g-you-will-be-satisfied/slide-03.jpg",
+        "20-g-you-will-be-satisfied/slide-04.jpg"
+      ],
       "id": "g-you-will-be-satisfied",
       "type": "growth",
       "caption": "for the ones still waiting 🤍\n\nAd-Duhaa 93:5\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -184,7 +312,13 @@
     {
       "order": 21,
       "day": 5,
-      "file": "21-g-perhaps-you-hate.mp4",
+      "folder": "21-g-perhaps-you-hate",
+      "images": [
+        "21-g-perhaps-you-hate/slide-01.jpg",
+        "21-g-perhaps-you-hate/slide-02.jpg",
+        "21-g-perhaps-you-hate/slide-03.jpg",
+        "21-g-perhaps-you-hate/slide-04.jpg"
+      ],
       "id": "g-perhaps-you-hate",
       "type": "growth",
       "caption": "redirection, not rejection 🤍\n\nAl-Baqarah 2:216\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -193,7 +327,14 @@
     {
       "order": 22,
       "day": 5,
-      "file": "22-e-al-kawthar.mp4",
+      "folder": "22-e-al-kawthar",
+      "images": [
+        "22-e-al-kawthar/slide-01.jpg",
+        "22-e-al-kawthar/slide-02.jpg",
+        "22-e-al-kawthar/slide-03.jpg",
+        "22-e-al-kawthar/slide-04.jpg",
+        "22-e-al-kawthar/slide-05.jpg"
+      ],
       "id": "e-al-kawthar",
       "type": "edu",
       "caption": "Learn the meaning of the shortest surah 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -202,7 +343,13 @@
     {
       "order": 23,
       "day": 5,
-      "file": "23-g-complain-to-allah.mp4",
+      "folder": "23-g-complain-to-allah",
+      "images": [
+        "23-g-complain-to-allah/slide-01.jpg",
+        "23-g-complain-to-allah/slide-02.jpg",
+        "23-g-complain-to-allah/slide-03.jpg",
+        "23-g-complain-to-allah/slide-04.jpg"
+      ],
       "id": "g-complain-to-allah",
       "type": "growth",
       "caption": "take it to Him 🤍\n\nYusuf 12:86\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -211,7 +358,14 @@
     {
       "order": 24,
       "day": 5,
-      "file": "24-c-sounds-to-meaning.mp4",
+      "folder": "24-c-sounds-to-meaning",
+      "images": [
+        "24-c-sounds-to-meaning/slide-01.jpg",
+        "24-c-sounds-to-meaning/slide-02.jpg",
+        "24-c-sounds-to-meaning/slide-03.jpg",
+        "24-c-sounds-to-meaning/slide-04.jpg",
+        "24-c-sounds-to-meaning/slide-05.jpg"
+      ],
       "id": "c-sounds-to-meaning",
       "type": "cta",
       "caption": "You've memorized the sounds. Let's memorize the meaning.\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -220,7 +374,13 @@
     {
       "order": 25,
       "day": 5,
-      "file": "25-g-dua-of-yunus.mp4",
+      "folder": "25-g-dua-of-yunus",
+      "images": [
+        "25-g-dua-of-yunus/slide-01.jpg",
+        "25-g-dua-of-yunus/slide-02.jpg",
+        "25-g-dua-of-yunus/slide-03.jpg",
+        "25-g-dua-of-yunus/slide-04.jpg"
+      ],
       "id": "g-dua-of-yunus",
       "type": "growth",
       "caption": "the dua from the darkness 🤍\n\nAl-Anbya 21:87\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -229,7 +389,13 @@
     {
       "order": 26,
       "day": 6,
-      "file": "26-g-dua-of-musa.mp4",
+      "folder": "26-g-dua-of-musa",
+      "images": [
+        "26-g-dua-of-musa/slide-01.jpg",
+        "26-g-dua-of-musa/slide-02.jpg",
+        "26-g-dua-of-musa/slide-03.jpg",
+        "26-g-dua-of-musa/slide-04.jpg"
+      ],
       "id": "g-dua-of-musa",
       "type": "growth",
       "caption": "the dua for when you have nothing 🤍\n\nAl-Qasas 28:24\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -238,7 +404,14 @@
     {
       "order": 27,
       "day": 6,
-      "file": "27-e-day-of-recompense.mp4",
+      "folder": "27-e-day-of-recompense",
+      "images": [
+        "27-e-day-of-recompense/slide-01.jpg",
+        "27-e-day-of-recompense/slide-02.jpg",
+        "27-e-day-of-recompense/slide-03.jpg",
+        "27-e-day-of-recompense/slide-04.jpg",
+        "27-e-day-of-recompense/slide-05.jpg"
+      ],
       "id": "e-day-of-recompense",
       "type": "edu",
       "caption": "The balance inside Al-Fatiha 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -247,7 +420,13 @@
     {
       "order": 28,
       "day": 6,
-      "file": "28-g-allah-is-with-us.mp4",
+      "folder": "28-g-allah-is-with-us",
+      "images": [
+        "28-g-allah-is-with-us/slide-01.jpg",
+        "28-g-allah-is-with-us/slide-02.jpg",
+        "28-g-allah-is-with-us/slide-03.jpg",
+        "28-g-allah-is-with-us/slide-04.jpg"
+      ],
       "id": "g-allah-is-with-us",
       "type": "growth",
       "caption": "Allah is with us 🤍\n\nAt-Tawbah 9:40\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -256,7 +435,14 @@
     {
       "order": 29,
       "day": 6,
-      "file": "29-c-conversation.mp4",
+      "folder": "29-c-conversation",
+      "images": [
+        "29-c-conversation/slide-01.jpg",
+        "29-c-conversation/slide-02.jpg",
+        "29-c-conversation/slide-03.jpg",
+        "29-c-conversation/slide-04.jpg",
+        "29-c-conversation/slide-05.jpg"
+      ],
       "id": "c-conversation",
       "type": "cta",
       "caption": "Salah is a conversation. Do you know what you're saying?\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -265,7 +451,13 @@
     {
       "order": 30,
       "day": 6,
-      "file": "30-g-if-you-are-grateful.mp4",
+      "folder": "30-g-if-you-are-grateful",
+      "images": [
+        "30-g-if-you-are-grateful/slide-01.jpg",
+        "30-g-if-you-are-grateful/slide-02.jpg",
+        "30-g-if-you-are-grateful/slide-03.jpg",
+        "30-g-if-you-are-grateful/slide-04.jpg"
+      ],
       "id": "g-if-you-are-grateful",
       "type": "growth",
       "caption": "alhamdulillah for everything 🤍\n\nIbrahim 14:7\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -274,7 +466,13 @@
     {
       "order": 31,
       "day": 7,
-      "file": "31-g-call-upon-me.mp4",
+      "folder": "31-g-call-upon-me",
+      "images": [
+        "31-g-call-upon-me/slide-01.jpg",
+        "31-g-call-upon-me/slide-02.jpg",
+        "31-g-call-upon-me/slide-03.jpg",
+        "31-g-call-upon-me/slide-04.jpg"
+      ],
       "id": "g-call-upon-me",
       "type": "growth",
       "caption": "keep asking 🤍\n\nGhafir 40:60\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -283,7 +481,14 @@
     {
       "order": 32,
       "day": 7,
-      "file": "32-e-al-falaq.mp4",
+      "folder": "32-e-al-falaq",
+      "images": [
+        "32-e-al-falaq/slide-01.jpg",
+        "32-e-al-falaq/slide-02.jpg",
+        "32-e-al-falaq/slide-03.jpg",
+        "32-e-al-falaq/slide-04.jpg",
+        "32-e-al-falaq/slide-05.jpg"
+      ],
       "id": "e-al-falaq",
       "type": "edu",
       "caption": "Know what you're saying when you seek protection 📌\n\nLearn the meaning of every surah you recite with SurahLink. Link in bio.\n\n#quran #learnquran #quranmeaning #islam #muslimtiktok #tafsir #fyp",
@@ -292,7 +497,13 @@
     {
       "order": 33,
       "day": 7,
-      "file": "33-g-with-you-wherever.mp4",
+      "folder": "33-g-with-you-wherever",
+      "images": [
+        "33-g-with-you-wherever/slide-01.jpg",
+        "33-g-with-you-wherever/slide-02.jpg",
+        "33-g-with-you-wherever/slide-03.jpg",
+        "33-g-with-you-wherever/slide-04.jpg"
+      ],
       "id": "g-with-you-wherever",
       "type": "growth",
       "caption": "wherever you are 🤍\n\nAl-Hadid 57:4\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
@@ -301,7 +512,14 @@
     {
       "order": 34,
       "day": 7,
-      "file": "34-c-kids.mp4",
+      "folder": "34-c-kids",
+      "images": [
+        "34-c-kids/slide-01.jpg",
+        "34-c-kids/slide-02.jpg",
+        "34-c-kids/slide-03.jpg",
+        "34-c-kids/slide-04.jpg",
+        "34-c-kids/slide-05.jpg"
+      ],
       "id": "c-kids",
       "type": "cta",
       "caption": "Teaching your kids Al-Fatiha? Teach them what it means too.\n\nSurahLink helps you memorize the translation of the Quran, surah by surah. Download it on the App Store, link in bio 📲\n\n#quran #learnquran #muslimapp #islam #muslimtiktok #ramadanprep #fyp",
@@ -310,7 +528,13 @@
     {
       "order": 35,
       "day": 7,
-      "file": "35-g-with-the-patient.mp4",
+      "folder": "35-g-with-the-patient",
+      "images": [
+        "35-g-with-the-patient/slide-01.jpg",
+        "35-g-with-the-patient/slide-02.jpg",
+        "35-g-with-the-patient/slide-03.jpg",
+        "35-g-with-the-patient/slide-04.jpg"
+      ],
       "id": "g-with-the-patient",
       "type": "growth",
       "caption": "not waiting alone 🤍\n\nAl-Baqarah 2:153\n\n#quran #islam #muslimtiktok #islamicreminder #quranverses #deen #muslim #fyp",
