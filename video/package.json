@@ -1,0 +1,29 @@
+{
+  "name": "suralink-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/cli": "^4.0.543",
+    "@remotion/google-fonts": "^4.0.543",
+    "@remotion/three": "^4.0.543",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.543",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2"
+  }
+}
