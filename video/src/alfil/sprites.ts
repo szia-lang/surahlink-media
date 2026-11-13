@@ -141,3 +141,48 @@ export const villager = (c: string, step = 0) => [
   `k${c}${c}k`,
   step ? '.kk.' : 'k..k',
 ];
+
+// Faceless rider on horseback (Dhul-Qarnayn): gold helmet, deep teal cloak, red cape. Facing right.
+export const rider = (step = 0) => raster(34, 32, (set, H) => {
+  const o = 2;
+  const legs = step ? [9, 12, 20, 23] : [8, 13, 19, 24];
+  legs.forEach((x, i) => H.rect(x, 18 + o, 2, 9, i % 2 ? 'o' : 'O'));
+  H.ellipse(16, 16 + o, 9, 4.5, 'o');
+  H.rect(22, 9 + o, 4, 8, 'o');
+  H.ellipse(27, 9 + o, 4, 2.5, 'o');
+  H.rect(21, 8 + o, 2, 8, 'h');
+  set(24, 6 + o, 'o');
+  H.rect(5, 14 + o, 2, 7, 'h');
+  // rider
+  H.rect(14, 13 + o, 3, 5, 'n');
+  H.rect(13, 6 + o, 5, 7, 'n');
+  H.rect(10, 7 + o, 3, 9, 'r');
+  set(18, 9 + o, 's'); set(19, 9 + o, 's');
+  H.rect(14, 2 + o, 4, 4, 's');
+  H.rect(13, 0 + o, 6, 2, 'y'); set(15, o - 1, 'y'); set(16, o - 1, 'y');
+});
+
+// Everything mapped to one dark tone: used for Gog and Magog, who are only ever shown as shadows.
+export const SHADOW: Record<string, string> = Object.fromEntries(Object.keys(PAL).map((k) => [k, '#120e16']));
+
+export const goldChest = (open: boolean) => raster(20, 16, (set, H) => {
+  H.rect(2, 7, 16, 8, 'b');
+  H.rect(2, 9, 16, 1, 'y');
+  H.rect(9, 9, 2, 3, 'y');
+  if (open) { H.rect(2, 1, 16, 4, 'b'); H.rect(2, 4, 16, 1, 'y'); H.rect(3, 5, 14, 2, 'y'); set(5, 4, 'w'); set(12, 5, 'w'); }
+  else { H.rect(2, 4, 16, 3, 'b'); H.rect(2, 6, 16, 1, 'y'); }
+});
+
+// Tall human silhouette for Gog and Magog (drawn only with the SHADOW palette). arms: raised for climbing.
+export const shadowMan = (step = 0, arms = false) => [
+  arms ? 'k....k' : '......',
+  arms ? 'k.kk.k' : '..kk..',
+  arms ? 'kkkkkk' : '.kkkk.',
+  '..kk..',
+  arms ? '.kkkk.' : 'kkkkkk',
+  arms ? '.kkkk.' : 'k.kk.k',
+  '.kkkk.',
+  '.kkkk.',
+  step ? '.k..k.' : '..kk..',
+  step ? 'k....k' : '.k..k.',
+];

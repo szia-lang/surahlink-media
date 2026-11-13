@@ -5,6 +5,7 @@ import {AmirSheet, AmirWalkTest} from './AmirSheet';
 import {EndCard, endCardDefaults} from './EndCard';
 import {AlFilPreview} from './alfil/AlFilPreview';
 import {AlFil, ALFIL_FRAMES} from './alfil/AlFil';
+import {GogMagog, GM_DURATION} from './gogmagog/GogMagog';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
 export const RemotionRoot: React.FC = () => (
@@ -15,5 +16,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="EndCard" component={EndCard} defaultProps={endCardDefaults} durationInFrames={120} fps={30} width={1080} height={1920} />
     <Composition id="AlFilPreview" component={AlFilPreview} durationInFrames={300} fps={30} width={1080} height={1920} />
     <Composition id="AlFil" component={AlFil} durationInFrames={ALFIL_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="GogMagog" component={GogMagog} durationInFrames={Math.round(GM_DURATION * 30)} fps={30} width={1080} height={1920} />
   </>
 );
