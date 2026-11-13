@@ -6,6 +6,7 @@ export const PAL: Record<string, string> = {
   ...AMIR_PALETTE,
   e: '#8b9096', E: '#686d74', r: '#a8432f', R: '#7e2f22', M: '#9aa0a6',
   B: '#25222b', o: '#9b5a35', x: '#1c2620',
+  c: '#eadfc6', C: '#c9b994', n: '#1f5f5c', P: '#6b3fa0',
 };
 
 type Set = (x: number, y: number, ch: string) => void;
@@ -106,3 +107,37 @@ export const bird = (up: boolean) =>
   up
     ? ['B.......B', 'BB.....BB', '.BBBBBBB.', '...BBB...', '....o....']
     : ['.........', '...BBB...', '.BBBBBBB.', 'BB..o..BB', 'B.......B'];
+
+// Faceless ruler: gold crown, red robe.
+export const abraha = () => raster(18, 32, (set, H) => {
+  H.rect(6, 9, 6, 6, 's');
+  H.rect(6, 6, 6, 3, 'y'); set(6, 5, 'y'); set(9, 5, 'y'); set(11, 5, 'y');
+  H.rect(8, 15, 2, 1, 's');
+  H.rect(3, 16, 12, 3, 'r');
+  H.rect(4, 19, 10, 10, 'r');
+  H.rect(8, 16, 2, 13, 'y');
+  H.rect(2, 19, 2, 6, 'R'); H.rect(14, 19, 2, 6, 'R');
+  set(2, 25, 's'); set(15, 25, 's');
+  H.rect(5, 29, 3, 1, 'b'); H.rect(10, 29, 3, 1, 'b');
+});
+
+// Faceless elder (Abdul-Muttalib): white turban, white beard, cream robe, brown cloak.
+export const elder = () => raster(18, 32, (set, H) => {
+  H.rect(5, 5, 8, 4, 'w');
+  H.rect(6, 9, 6, 4, 's');
+  H.rect(6, 13, 6, 3, 'w');
+  H.rect(3, 16, 12, 13, 'c');
+  H.rect(3, 16, 3, 13, 'b'); H.rect(12, 16, 3, 13, 'b');
+  set(2, 24, 's'); set(15, 24, 's');
+  H.rect(5, 29, 3, 1, 'b'); H.rect(10, 29, 3, 1, 'b');
+});
+
+export const villager = (c: string, step = 0) => [
+  '.kk.',
+  'kssk',
+  '.kk.',
+  `k${c}${c}k`,
+  `k${c}${c}k`,
+  `k${c}${c}k`,
+  step ? '.kk.' : 'k..k',
+];
