@@ -23,8 +23,10 @@ export const endCardDefaults: EndCardProps = {
 
 // ~4s end card that goes on the end of every video.
 export const EndCard: React.FC<EndCardProps> = ({headline, cta, sub, screen}) => {
-  const frame = useCurrentFrame();
-  const {fps} = useVideoConfig();
+  const {fps: realFps} = useVideoConfig();
+  // Timing is written in 30fps frames; this keeps it identical when a video renders at 60fps.
+  const frame = (useCurrentFrame() * 30) / realFps;
+  const fps = 30;
   const pop = (delay: number) => spring({frame: frame - delay, fps, config: {damping: 14, mass: 0.7}});
 
   const bg = interpolate(frame, [0, 10], [0, 1], {extrapolateRight: 'clamp'});

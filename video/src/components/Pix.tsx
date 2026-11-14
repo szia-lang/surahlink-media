@@ -1,7 +1,8 @@
 import React, {useMemo} from 'react';
 
 // Draws a pixel grid inside a parent <svg>, merging same-color runs into single rects.
-export const PixG: React.FC<{rows: string[]; palette: Record<string, string>; x?: number; y?: number; s?: number; flip?: boolean; opacity?: number}> = ({rows, palette, x = 0, y = 0, s = 1, flip = false, opacity}) => {
+// smooth: keep sub-pixel positions so movement glides instead of snapping (used by 60fps videos).
+export const PixG: React.FC<{rows: string[]; palette: Record<string, string>; x?: number; y?: number; s?: number; flip?: boolean; opacity?: number; smooth?: boolean}> = ({rows, palette, x = 0, y = 0, s = 1, flip = false, opacity, smooth = false}) => {
   const w = Math.max(...rows.map((r) => r.length));
   const rects = useMemo(() => {
     const out: React.ReactNode[] = [];
@@ -17,7 +18,9 @@ export const PixG: React.FC<{rows: string[]; palette: Record<string, string>; x?
     });
     return out;
   }, [rows, palette]);
-  const t = flip ? `translate(${Math.round(x) + w * s} ${Math.round(y)}) scale(${-s} ${s})` : `translate(${Math.round(x)} ${Math.round(y)}) scale(${s})`;
+  const rx = smooth ? x : Math.round(x);
+  const ry = smooth ? y : Math.round(y);
+  const t = flip ? `translate(${rx + w * s} ${ry}) scale(${-s} ${s})` : `translate(${rx} ${ry}) scale(${s})`;
   return <g transform={t} opacity={opacity}>{rects}</g>;
 };
 

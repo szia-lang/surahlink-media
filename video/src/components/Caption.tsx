@@ -5,10 +5,11 @@ import {loadFont} from '@remotion/google-fonts/Nunito';
 const {fontFamily} = loadFont('normal', {weights: ['800', '900']});
 
 // Cream story card with a double green border (inspo style). Wrap words in *stars* for gold.
-export const Caption: React.FC<{text: string; top?: number; size?: number}> = ({text, top = 170, size = 62}) => {
+// instant: fully visible on the very first frame (for hooks).
+export const Caption: React.FC<{text: string; top?: number; size?: number; instant?: boolean}> = ({text, top = 170, size = 62, instant = false}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const s = spring({frame, fps, config: {damping: 12, mass: 0.6}});
+  const s = instant ? 1 : spring({frame, fps, config: {damping: 12, mass: 0.6}});
   const parts = text.split('*');
   return (
     <div style={{position: 'absolute', top, left: 70, right: 70, display: 'flex', justifyContent: 'center', transform: `scale(${interpolate(s, [0, 1], [0.6, 1])})`, opacity: s}}>
