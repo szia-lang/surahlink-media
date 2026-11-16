@@ -9,6 +9,7 @@ import {GogMagog, GM_DURATION} from './gogmagog/GogMagog';
 import {Ibrahim, IB_DURATION, IB_FPS} from './ibrahim/Ibrahim';
 import {Musa, MU_DURATION, MU_FPS} from './musa/Musa';
 import {Kursi, AK_DURATION, AK_FPS} from './kursi/Kursi';
+import {Abasa, AB_DURATION, AB_FPS} from './abasa/Abasa';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
 export const RemotionRoot: React.FC = () => (
@@ -23,5 +24,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Ibrahim" component={Ibrahim} durationInFrames={Math.round(IB_DURATION * IB_FPS)} fps={IB_FPS} width={1080} height={1920} />
     <Composition id="Musa" component={Musa} durationInFrames={Math.round(MU_DURATION * MU_FPS)} fps={MU_FPS} width={1080} height={1920} />
     <Composition id="Kursi" component={Kursi} durationInFrames={Math.round(AK_DURATION * AK_FPS)} fps={AK_FPS} width={1080} height={1920} />
+    <Composition id="Abasa" component={Abasa} durationInFrames={Math.round(AB_DURATION * AB_FPS)} fps={AB_FPS} width={1080} height={1920} />
   </>
 );
