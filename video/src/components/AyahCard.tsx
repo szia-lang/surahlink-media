@@ -2,9 +2,13 @@ import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont as loadAmiri} from '@remotion/google-fonts/AmiriQuran';
 import {loadFont as loadNunito} from '@remotion/google-fonts/Nunito';
+import {loadFont as loadScheherazade} from '@remotion/google-fonts/ScheherazadeNew';
+import {loadFont as loadNaskh} from '@remotion/google-fonts/NotoNaskhArabic';
 import ayat from '../data/ayat.json';
 
-const amiri = loadAmiri().fontFamily;
+// Quran font with fallbacks: some Quranic marks (e.g. U+065E tanween) are missing from Amiri Quran.
+export const QURAN_FONT = `${loadAmiri().fontFamily}, ${loadScheherazade().fontFamily}, ${loadNaskh().fontFamily}, serif`;
+const amiri = QURAN_FONT;
 const nunito = loadNunito('normal', {weights: ['800', '900']}).fontFamily;
 
 // Ayah card. Arabic always comes from the dataset by word range; never typed by hand.
