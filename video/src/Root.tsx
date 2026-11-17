@@ -10,6 +10,8 @@ import {Ibrahim, IB_DURATION, IB_FPS} from './ibrahim/Ibrahim';
 import {Musa, MU_DURATION, MU_FPS} from './musa/Musa';
 import {Kursi, AK_DURATION, AK_FPS} from './kursi/Kursi';
 import {Abasa, AB_DURATION, AB_FPS} from './abasa/Abasa';
+import {Duha, DU_DURATION, DU_FPS} from './duha/Duha';
+import {Kahf, KF_DURATION, KF_FPS} from './kahf/Kahf';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
 export const RemotionRoot: React.FC = () => (
@@ -25,5 +27,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Musa" component={Musa} durationInFrames={Math.round(MU_DURATION * MU_FPS)} fps={MU_FPS} width={1080} height={1920} />
     <Composition id="Kursi" component={Kursi} durationInFrames={Math.round(AK_DURATION * AK_FPS)} fps={AK_FPS} width={1080} height={1920} />
     <Composition id="Abasa" component={Abasa} durationInFrames={Math.round(AB_DURATION * AB_FPS)} fps={AB_FPS} width={1080} height={1920} />
+    <Composition id="Duha" component={Duha} durationInFrames={Math.round(DU_DURATION * DU_FPS)} fps={DU_FPS} width={1080} height={1920} />
+    <Composition id="Kahf" component={Kahf} durationInFrames={Math.round(KF_DURATION * KF_FPS)} fps={KF_FPS} width={1080} height={1920} />
   </>
 );

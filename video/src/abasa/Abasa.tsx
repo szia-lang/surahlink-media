@@ -14,7 +14,7 @@ export const AB_DURATION = 43.78;
 const nunito = loadNunito('normal', {weights: ['800', '900']}).fontFamily;
 
 // ---------- sprites (faceless; the Prophet ﷺ is only ever a soft light) ----------
-const leader = (c: string) => raster(12, 22, (set, H) => {
+export const leader = (c: string) => raster(12, 22, (set, H) => {
   H.rect(3, 0, 6, 3, 'y');
   H.rect(4, 3, 4, 4, 's');
   H.rect(1, 7, 10, 13, c);
