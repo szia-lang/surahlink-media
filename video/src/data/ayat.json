@@ -605,5 +605,72 @@
    "نَبِيّٗا"
   ],
   "translation": "[Jesus] said, \"Indeed, I am the servant of Allah. He has given me the Scripture and made me a prophet"
+ },
+ "108:1": {
+  "surah": "Al-Kawthar",
+  "words": [
+   "إِنَّآ",
+   "أَعۡطَيۡنَٰكَ",
+   "ٱلۡكَوۡثَرَ"
+  ],
+  "translation": "Indeed, We have granted you, [O Muhammad], al-Kawthar"
+ },
+ "108:2": {
+  "surah": "Al-Kawthar",
+  "words": [
+   "فَصَلِّ",
+   "لِرَبِّكَ",
+   "وَٱنۡحَرۡ"
+  ],
+  "translation": "So pray to your Lord and sacrifice [to Him alone]"
+ },
+ "108:3": {
+  "surah": "Al-Kawthar",
+  "words": [
+   "إِنَّ",
+   "شَانِئَكَ",
+   "هُوَ",
+   "ٱلۡأَبۡتَرُ"
+  ],
+  "translation": "Indeed, your enemy is the one cut off"
+ },
+ "112:1": {
+  "surah": "Al-Ikhlas",
+  "words": [
+   "قُلۡ",
+   "هُوَ",
+   "ٱللَّهُ",
+   "أَحَدٌ"
+  ],
+  "translation": "Say, \"He is Allah, [who is] One"
+ },
+ "112:2": {
+  "surah": "Al-Ikhlas",
+  "words": [
+   "ٱللَّهُ",
+   "ٱلصَّمَدُ"
+  ],
+  "translation": "Allah, the Eternal Refuge"
+ },
+ "112:3": {
+  "surah": "Al-Ikhlas",
+  "words": [
+   "لَمۡ",
+   "يَلِدۡ",
+   "وَلَمۡ",
+   "يُولَدۡ"
+  ],
+  "translation": "He neither begets nor is born"
+ },
+ "112:4": {
+  "surah": "Al-Ikhlas",
+  "words": [
+   "وَلَمۡ",
+   "يَكُن",
+   "لَّهُۥ",
+   "كُفُوًا",
+   "أَحَدُۢ"
+  ],
+  "translation": "Nor is there to Him any equivalent"
  }
 }
