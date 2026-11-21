@@ -129,4 +129,4 @@ const SFX: Cue[] = [
   [15, 'shimmer', 0.35, 3], [15, 'storm', 0.25, 10], [25, 'whoosh', 0.4, 1.5], [29, 'shimmer', 0.35, 3], [36, 'crowd', 0.2, 3.5], [36, 'whoosh', 0.4, 1.5], [39.5, 'impact', 0.6, 2.5],
 ];
 
-export const Khidr: React.FC = () => <Timeline shots={SHOTS} overlays={OVERLAYS} flashes={[0.2, 11.3]} endStart={43} duration={KH_DURATION} sfx={SFX} />;
+export const Khidr: React.FC = () => <Timeline shots={SHOTS} overlays={OVERLAYS} flashes={[0.2, 11.3]} endStart={43} duration={KH_DURATION} sfx={SFX} bed="audio/nasheed-fiya-hubbun.mp3" />;

@@ -140,4 +140,4 @@ const SFX: Cue[] = [
   [14.5, 'whoosh', 0.5, 1.5], [14.5, 'storm', 0.2, 5.5], [20, 'shimmer', 0.35, 3], [26, 'crowd', 0.3, 5], [31, 'shimmer', 0.35, 3], [37, 'impact', 0.55, 2.5],
 ];
 
-export const Cave: React.FC = () => <Timeline shots={SHOTS} overlays={OVERLAYS} flashes={[14.5]} endStart={41} duration={CV_DURATION} sfx={SFX} />;
+export const Cave: React.FC = () => <Timeline shots={SHOTS} overlays={OVERLAYS} flashes={[14.5]} endStart={41} duration={CV_DURATION} sfx={SFX} bed="audio/nasheed-fiya-hubbun.mp3" />;
