@@ -23,6 +23,7 @@ import {Pharaoh, PH_DURATION} from './stories5/Pharaoh';
 import {Mulk, ML_DURATION} from './stories5/Mulk';
 import {Poor, PO_DURATION} from './stories5/Poor';
 import {Yunus, YN_DURATION} from './stories5/Yunus';
+import {PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, HOOK_DURATIONS} from './hooks/HookTests';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
 export const RemotionRoot: React.FC = () => (
@@ -51,5 +52,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Mulk" component={Mulk} durationInFrames={Math.round(ML_DURATION * 60)} fps={60} width={1080} height={1920} />
     <Composition id="Poor" component={Poor} durationInFrames={Math.round(PO_DURATION * 60)} fps={60} width={1080} height={1920} />
     <Composition id="Yunus" component={Yunus} durationInFrames={Math.round(YN_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="PoorA" component={PoorA} durationInFrames={Math.round(HOOK_DURATIONS.PoorA * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="PoorB" component={PoorB} durationInFrames={Math.round(HOOK_DURATIONS.PoorB * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="PoorC" component={PoorC} durationInFrames={Math.round(HOOK_DURATIONS.PoorC * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="YunusA" component={YunusA} durationInFrames={Math.round(HOOK_DURATIONS.YunusA * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="YunusB" component={YunusB} durationInFrames={Math.round(HOOK_DURATIONS.YunusB * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="YunusC" component={YunusC} durationInFrames={Math.round(HOOK_DURATIONS.YunusC * 60)} fps={60} width={1080} height={1920} />
   </>
 );

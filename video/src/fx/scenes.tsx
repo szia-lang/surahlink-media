@@ -95,9 +95,12 @@ export const HadithCard: React.FC<{source: string; text: string; gold?: string; 
   );
 };
 // One big word/phrase that punches in (kinetic text).
-export const Punch: React.FC<{text: string; top?: number; size?: number; color?: string}> = ({text, top = 760, size = 120, color = '#f9d77a'}) => {
+// instant: fully readable on its first frame, with only a small punch (for hooks).
+export const Punch: React.FC<{text: string; top?: number; size?: number; color?: string; instant?: boolean}> = ({text, top = 760, size = 120, color = '#f9d77a', instant = false}) => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
   const s = spring({frame: f, fps, config: {damping: 9, mass: 0.5}});
-  return <div style={{position: 'absolute', top, width: '100%', textAlign: 'center', fontFamily: nunito, fontWeight: 900, fontSize: size, color, lineHeight: 1, transform: `scale(${interpolate(s, [0, 1], [1.8, 1])})`, opacity: Math.min(1, s * 1.5), textShadow: '0 0 20px rgba(0,0,0,.6), 0 8px 0 rgba(0,0,0,.55)'}}>{text}</div>;
+  const scale = instant ? interpolate(f, [0, 8], [1.12, 1], {extrapolateRight: 'clamp'}) : interpolate(s, [0, 1], [1.8, 1]);
+  const opacity = instant ? 1 : Math.min(1, s * 1.5);
+  return <div style={{position: 'absolute', top, width: '100%', textAlign: 'center', fontFamily: nunito, fontWeight: 900, fontSize: size, color, lineHeight: 1, transform: `scale(${scale})`, opacity, textShadow: '0 0 20px rgba(0,0,0,.6), 0 8px 0 rgba(0,0,0,.55)'}}>{text}</div>;
 };
