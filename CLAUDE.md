@@ -26,3 +26,6 @@ Slides are served by GitHub Pages from `docs/` (https://szia-lang.github.io/sura
 - `engine/content/*.js` content banks · `engine/templates/` slide designs (growth = scenes, pro = branded)
 - `engine/build.js` verify + render to `docs/media/<week>/<nn-id>/slide-XX.jpg` + manifest.json
 - `engine/queue.js` adds a week to Buffer (`--test <n>` sends one post now) · `engine/state/used.json` tracks used posts + rotation
+
+## Video studio
+The Remotion story-video project (Reels/TikTok, narration, captions, Meta scheduling rules) lives in `video/`. Read `video/CLAUDE.md` before working on videos or posting them.
