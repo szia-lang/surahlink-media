@@ -18,6 +18,11 @@ import {Maryam, MR_DURATION, MR_FPS} from './maryam/Maryam';
 import {Kawthar, KW_DURATION, KW_FPS} from './kawthar/Kawthar';
 import {Ikhlas, IK_DURATION, IK_FPS} from './ikhlas/Ikhlas';
 import {Kursi2, K2_DURATION, K2_FPS} from './kursi2/Kursi2';
+import {Dajjal, DJ_DURATION} from './stories5/Dajjal';
+import {Pharaoh, PH_DURATION} from './stories5/Pharaoh';
+import {Mulk, ML_DURATION} from './stories5/Mulk';
+import {Poor, PO_DURATION} from './stories5/Poor';
+import {Yunus, YN_DURATION} from './stories5/Yunus';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
 export const RemotionRoot: React.FC = () => (
@@ -41,5 +46,10 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Kawthar" component={Kawthar} durationInFrames={Math.round(KW_DURATION * KW_FPS)} fps={KW_FPS} width={1080} height={1920} />
     <Composition id="Ikhlas" component={Ikhlas} durationInFrames={Math.round(IK_DURATION * IK_FPS)} fps={IK_FPS} width={1080} height={1920} />
     <Composition id="Kursi2" component={Kursi2} durationInFrames={Math.round(K2_DURATION * K2_FPS)} fps={K2_FPS} width={1080} height={1920} />
+    <Composition id="Dajjal" component={Dajjal} durationInFrames={Math.round(DJ_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Pharaoh" component={Pharaoh} durationInFrames={Math.round(PH_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Mulk" component={Mulk} durationInFrames={Math.round(ML_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Poor" component={Poor} durationInFrames={Math.round(PO_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Yunus" component={Yunus} durationInFrames={Math.round(YN_DURATION * 60)} fps={60} width={1080} height={1920} />
   </>
 );

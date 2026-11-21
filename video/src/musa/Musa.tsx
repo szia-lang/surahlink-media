@@ -11,7 +11,7 @@ export const MU_FPS = 60;
 export const MU_DURATION = 42.08;
 
 // ---------- sprites (all faceless; Musa is only ever light) ----------
-const magician = raster(12, 24, (set, H) => {
+export const magician = raster(12, 24, (set, H) => {
   for (let y = 0; y < 6; y++) H.rect(6 - y * 0.6, y, y * 1.2 + 1, 1, 'P');
   H.rect(4, 6, 5, 4, 's');
   H.rect(2, 10, 9, 12, 'P');
@@ -21,7 +21,7 @@ const magician = raster(12, 24, (set, H) => {
   H.rect(3, 22, 3, 1, 'b'); H.rect(7, 22, 3, 1, 'b');
 });
 // magician in sujood: forehead to the ground, side view facing right
-const sujood = raster(24, 14, (set, H) => {
+export const sujood = raster(24, 14, (set, H) => {
   H.ellipse(9, 7, 7, 6, 'P');
   H.rect(2, 9, 8, 4, 'P');
   H.rect(10, 4, 1, 9, 'y');
@@ -30,7 +30,7 @@ const sujood = raster(24, 14, (set, H) => {
   H.rect(19, 12, 4, 1, 's');
   for (let y = 0; y < 3; y++) H.rect(4 + y, 2 + y, 3, 1, 'P');
 });
-const pharaoh = raster(20, 34, (set, H) => {
+export const pharaoh = raster(20, 34, (set, H) => {
   H.rect(4, 3, 12, 10, 'y');
   for (let y = 3; y < 13; y += 2) H.rect(4, y, 12, 1, 'n');
   H.rect(4, 13, 3, 6, 'y'); H.rect(13, 13, 3, 6, 'y');
