@@ -68,7 +68,8 @@ Understand what you recite with SuraLink, link in bio.
 
 ## Compositions (ids for `remotion render`)
 AlFil, GogMagog, Ibrahim, Musa, Kursi, Abasa, Duha, Kahf, Yusuf, Nuh, Maryam, Kawthar, Ikhlas, Kursi2,
-Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, EndCard, AmirSheet.
+Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, EndCard, AmirSheet.
+Khidr and Cave are silent (text-only, sound effects): a cheaper format when credits are low.
 
 ## Scheduling in Meta Business Suite
 Needs a session running on the owner's computer with the Claude in Chrome extension (logged into business.facebook.com).

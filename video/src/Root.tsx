@@ -23,6 +23,10 @@ import {Pharaoh, PH_DURATION} from './stories5/Pharaoh';
 import {Mulk, ML_DURATION} from './stories5/Mulk';
 import {Poor, PO_DURATION} from './stories5/Poor';
 import {Yunus, YN_DURATION} from './stories5/Yunus';
+import {Habil, HB_DURATION} from './stories4/Habil';
+import {Qarun, QR_DURATION} from './stories4/Qarun';
+import {Khidr, KH_DURATION} from './stories4/Khidr';
+import {Cave, CV_DURATION} from './stories4/Cave';
 import {PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, HOOK_DURATIONS} from './hooks/HookTests';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
@@ -55,6 +59,10 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="PoorA" component={PoorA} durationInFrames={Math.round(HOOK_DURATIONS.PoorA * 60)} fps={60} width={1080} height={1920} />
     <Composition id="PoorB" component={PoorB} durationInFrames={Math.round(HOOK_DURATIONS.PoorB * 60)} fps={60} width={1080} height={1920} />
     <Composition id="PoorC" component={PoorC} durationInFrames={Math.round(HOOK_DURATIONS.PoorC * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Habil" component={Habil} durationInFrames={Math.round(HB_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Qarun" component={Qarun} durationInFrames={Math.round(QR_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Khidr" component={Khidr} durationInFrames={Math.round(KH_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Cave" component={Cave} durationInFrames={Math.round(CV_DURATION * 60)} fps={60} width={1080} height={1920} />
     <Composition id="YunusA" component={YunusA} durationInFrames={Math.round(HOOK_DURATIONS.YunusA * 60)} fps={60} width={1080} height={1920} />
     <Composition id="YunusB" component={YunusB} durationInFrames={Math.round(HOOK_DURATIONS.YunusB * 60)} fps={60} width={1080} height={1920} />
     <Composition id="YunusC" component={YunusC} durationInFrames={Math.round(HOOK_DURATIONS.YunusC * 60)} fps={60} width={1080} height={1920} />
