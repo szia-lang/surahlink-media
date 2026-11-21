@@ -45,6 +45,11 @@ Owner reviews scripts before any narration is generated. Ask before spending Ele
 - Hook framework (owner's): Context (what it is, said + shown + written in second 1) -> Lean (shock / pain point / proof) -> Contrarian snapback.
 - Hook A/B/C tests running: `PoorA/B/C`, `YunusA/B/C` in `src/hooks/HookTests.tsx` (A = demand/climax, B = question, C = shocking claim). Use the winning style going forward once results are in.
 
+## File naming (every video sent to the owner)
+Name each rendered video `Surah Stories YYYY-MM-DD - N.mp4`: the date it was made, numbered 1, 2, 3... in the order made that day.
+The owner drops these into a folder that an automation posts from to Meta Business Suite, so names must be exact and never repeat.
+Hook-test variants get their own numbers too and should be posted on separate days.
+
 ## Captions (every post)
 ```
 <one short hook line> <emoji>
