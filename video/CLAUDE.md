@@ -2,7 +2,7 @@
 
 Remotion + React pixel-art story videos for the SuraLink app's faceless Instagram, Facebook and TikTok.
 SuraLink helps people understand the meaning of the Quran (surah lessons, word meanings, Quran reader, prayer times, Qibla, trivia).
-Owner reviews scripts before any narration is generated. Ask before spending ElevenLabs credits.
+When the owner says "just make them", don't ask for confirmation: pick ideas, write, narrate (<=500 credits per video) and render.
 
 ## Commands
 - `npm install` then `npm run studio` (live editor) or `npx remotion render src/index.ts <CompositionId> out/<name>.mp4`
@@ -37,11 +37,10 @@ Owner reviews scripts before any narration is generated. Ask before spending Ele
 - Best so far: Gog & Magog (loop), Ayat al-Kursi + Shaytan story, Surah Ad-Duha, Surah Abasa, Pharaoh's magicians.
 - Winners = one clear story + a twist + something viewers already recite or an end-times mystery.
 - Weak: comparison videos (Mary in Bible vs Quran). Don't repeat that format.
-- Retention problem: >60% leave in the first 2-3 s. Rules for every new video:
-  1. Open on the most dramatic moment, never a static title card.
-  2. First line <= 8 words, under 2 s, tension inside it.
-  3. Hook text readable on frame 1 (no fade-in), 3-6 words, centred.
-  4. Impact sound on frame 1; a new image every 0.6-1 s for the first 3 s.
+- HOOK STYLE (owner, Nov 22): use the ORIGINAL hooks. The fast punch-text/cold-open hooks (Habil, Qarun, Khidr, Cave, PoorA-C, YunusA-C) did NOT work.
+  Open on a cream title card on frame 1 (`src/stories6/TitleCard.tsx`): surah name + its Arabic + one tension line, while the
+  narrator says the surah name and the tension in the first sentence (e.g. "Surah Ad-Duha...", "They offered the Prophet a deal.").
+  Narration processed with atempo 1.1 like the originals. One story, one twist, ayah cards, CTA.
 - Hook framework (owner's): Context (what it is, said + shown + written in second 1) -> Lean (shock / pain point / proof) -> Contrarian snapback.
 - ONE version per video with ONE hook. Never make hook variants or A/B/C versions of the same video (owner's rule). The old PoorA/B/C, YunusA/B/C compositions are retired.
 
@@ -68,7 +67,7 @@ Understand what you recite with SuraLink, link in bio.
 
 ## Compositions (ids for `remotion render`)
 AlFil, GogMagog, Ibrahim, Musa, Kursi, Abasa, Duha, Kahf, Yusuf, Nuh, Maryam, Kawthar, Ikhlas, Kursi2,
-Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, EndCard, AmirSheet.
+Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, EndCard, AmirSheet.
 Khidr and Cave are silent (text-only, sound effects): a cheaper format when credits are low.
 
 ## Scheduling in Meta Business Suite
