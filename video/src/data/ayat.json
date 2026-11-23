@@ -1344,5 +1344,115 @@
    "دِينِ"
   ],
   "translation": "For you is your religion, and for me is my religion"
+ },
+ "110:1": {
+  "surah": "An-Nasr",
+  "words": [
+   "إِذَا",
+   "جَآءَ",
+   "نَصۡرُ",
+   "ٱللَّهِ",
+   "وَٱلۡفَتۡحُ"
+  ],
+  "translation": "When the victory of Allah has come and the conquest"
+ },
+ "110:3": {
+  "surah": "An-Nasr",
+  "words": [
+   "فَسَبِّحۡ",
+   "بِحَمۡدِ",
+   "رَبِّكَ",
+   "وَٱسۡتَغۡفِرۡهُۚ",
+   "إِنَّهُۥ",
+   "كَانَ",
+   "تَوَّابَۢا"
+  ],
+  "translation": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance"
+ },
+ "39:53": {
+  "surah": "Az-Zumar",
+  "words": [
+   "۞قُلۡ",
+   "يَٰعِبَادِيَ",
+   "ٱلَّذِينَ",
+   "أَسۡرَفُواْ",
+   "عَلَىٰٓ",
+   "أَنفُسِهِمۡ",
+   "لَا",
+   "تَقۡنَطُواْ",
+   "مِن",
+   "رَّحۡمَةِ",
+   "ٱللَّهِۚ",
+   "إِنَّ",
+   "ٱللَّهَ",
+   "يَغۡفِرُ",
+   "ٱلذُّنُوبَ",
+   "جَمِيعًاۚ",
+   "إِنَّهُۥ",
+   "هُوَ",
+   "ٱلۡغَفُورُ",
+   "ٱلرَّحِيمُ"
+  ],
+  "translation": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful"
+ },
+ "94:5": {
+  "surah": "Ash-Sharh",
+  "words": [
+   "فَإِنَّ",
+   "مَعَ",
+   "ٱلۡعُسۡرِ",
+   "يُسۡرًا"
+  ],
+  "translation": "For indeed, with hardship [will be] ease"
+ },
+ "94:6": {
+  "surah": "Ash-Sharh",
+  "words": [
+   "إِنَّ",
+   "مَعَ",
+   "ٱلۡعُسۡرِ",
+   "يُسۡرٗا"
+  ],
+  "translation": "Indeed, with hardship [will be] ease"
+ },
+ "102:1": {
+  "surah": "At-Takathur",
+  "words": [
+   "أَلۡهَىٰكُمُ",
+   "ٱلتَّكَاثُرُ"
+  ],
+  "translation": "Competition in [worldly] increase diverts you"
+ },
+ "102:2": {
+  "surah": "At-Takathur",
+  "words": [
+   "حَتَّىٰ",
+   "زُرۡتُمُ",
+   "ٱلۡمَقَابِرَ"
+  ],
+  "translation": "Until you visit the graveyards"
+ },
+ "97:1": {
+  "surah": "Al-Qadr",
+  "words": [
+   "إِنَّآ",
+   "أَنزَلۡنَٰهُ",
+   "فِي",
+   "لَيۡلَةِ",
+   "ٱلۡقَدۡرِ"
+  ],
+  "translation": "Indeed, We sent the Qur'an down during the Night of Decree"
+ },
+ "97:3": {
+  "surah": "Al-Qadr",
+  "words": [
+   "لَيۡلَةُ",
+   "ٱلۡقَدۡرِ",
+   "خَيۡرٞ",
+   "مِّنۡ",
+   "أَلۡفِ",
+   "شَهۡرٖ"
+  ],
+  "translation": "The Night of Decree is better than a thousand months"
  }
 }
