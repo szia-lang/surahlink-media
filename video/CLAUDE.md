@@ -42,6 +42,10 @@ When the owner says "just make them", don't ask for confirmation: pick ideas, wr
   narrator says the surah name and the tension in the first sentence (e.g. "Surah Ad-Duha...", "They offered the Prophet a deal.").
   Narration processed with atempo 1.1 like the originals. One story, one twist, ayah cards, CTA.
 - Hook framework (owner's): Context (what it is, said + shown + written in second 1) -> Lean (shock / pain point / proof) -> Contrarian snapback.
+- Nov 23: title-card batches got ~200 views each. Nov 24 HOOK STYLE TEST (5 different stories, 5 hook types, files 2026-11-24 - 1..5):
+  1 Cry = question hook, 2 ZakariyaDua = POV hook, 3 Umar = transformation/contrast hook, 4 MaryamFact = "did you know" banner,
+  5 WestSunrise = end-times fear hook. Hook text is TikTok-native outline text (`NativeText` in `src/stories7/kit3.tsx`).
+  Owner will report which got the most views: make the next batch in that style and record the result here.
 - ONE version per video with ONE hook. Never make hook variants or A/B/C versions of the same video (owner's rule). The old PoorA/B/C, YunusA/B/C compositions are retired.
 
 ## File naming (every video sent to the owner)
@@ -67,7 +71,7 @@ Understand what you recite with SuraLink, link in bio.
 
 ## Compositions (ids for `remotion render`)
 AlFil, GogMagog, Ibrahim, Musa, Kursi, Abasa, Duha, Kahf, Yusuf, Nuh, Maryam, Kawthar, Ikhlas, Kursi2,
-Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, EndCard, AmirSheet.
+Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, EndCard, AmirSheet.
 Khidr and Cave are silent (text-only, sound effects): a cheaper format when credits are low.
 
 ## Scheduling in Meta Business Suite
