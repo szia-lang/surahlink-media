@@ -31,7 +31,7 @@ When the owner says "just make them", don't ask for confirmation: pick ideas, wr
 - `src/fx/Timeline.tsx`: assembles shots + overlays + flashes + end card + narration from second-based arrays.
 - `src/components/AyahCard.tsx` (Quran card, `QURAN_FONT` with fallbacks for all Quranic marks), `Caption.tsx`, `src/EndCard.tsx` (SuraLink CTA).
 - Host character **Amir** (`src/characters/amir.ts`): faceless, green thobe, white kufi. Poses: idle, point, read, phone, dua, react, back + walk cycle.
-- Sound effects in `public/sfx/` (impact, whoosh, underwater, storm, whale, shimmer, crowd, door). Use them: impact on frame 1, whoosh on cuts, ambience under scenes, shimmer on ayah cards. No music (many viewers avoid it).
+- Sound effects in `public/sfx/` (impact, whoosh, underwater, storm, whale, shimmer, crowd, door, pop, tick, ding). Use them: impact on frame 1, whoosh on cuts, ambience under scenes, shimmer on ayah cards. No music (many viewers avoid it).
 
 ## What works (performance notes)
 - Best so far: Gog & Magog (loop), Ayat al-Kursi + Shaytan story, Surah Ad-Duha, Surah Abasa, Pharaoh's magicians.
@@ -46,6 +46,10 @@ When the owner says "just make them", don't ask for confirmation: pick ideas, wr
   1 Cry = question hook, 2 ZakariyaDua = POV hook, 3 Umar = transformation/contrast hook, 4 MaryamFact = "did you know" banner,
   5 WestSunrise = end-times fear hook. Hook text is TikTok-native outline text (`NativeText` in `src/stories7/kit3.tsx`).
   Owner will report which got the most views: make the next batch in that style and record the result here.
+- Nov 25 FORMAT TEST (files 2026-11-25 - 1..5), owner said everything is doing badly, so each video is a different format:
+  1 Bismillah = word-by-word breakdown (narrated), 2 FourAyat = numbered "save this" list (narrated), 3 Quiz = 3-question quiz with timer
+  (silent + nasheed), 4 Texts = text-message story (silent + nasheed), 5 FearNot = aesthetic ayah word-by-word reveal (silent + nasheed).
+  Format pieces: `src/stories8/formats.tsx` (QuizCard, Chat, WordReveal). New sfx: pop, tick, ding. Record which format wins.
 - ONE version per video with ONE hook. Never make hook variants or A/B/C versions of the same video (owner's rule). The old PoorA/B/C, YunusA/B/C compositions are retired.
 
 ## File naming (every video sent to the owner)
@@ -71,7 +75,7 @@ Understand what you recite with SuraLink, link in bio.
 
 ## Compositions (ids for `remotion render`)
 AlFil, GogMagog, Ibrahim, Musa, Kursi, Abasa, Duha, Kahf, Yusuf, Nuh, Maryam, Kawthar, Ikhlas, Kursi2,
-Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, EndCard, AmirSheet.
+Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, Bismillah, FourAyat, Quiz, Texts, FearNot, EndCard, AmirSheet.
 Khidr and Cave are silent (text-only, sound effects): a cheaper format when credits are low.
 
 ## Scheduling in Meta Business Suite
