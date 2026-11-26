@@ -49,7 +49,7 @@ const Bubble: React.FC<{m: Msg; age: number}> = ({m, age}) => {
         {m.text}
         {m.ayah && (
           <div style={{background: '#f6efdc', borderRadius: 22, padding: '18px 22px', color: '#1d2b24', textAlign: 'center'}}>
-            <div style={{fontSize: 26, color: '#5b6a60', letterSpacing: 2}}>SURAH AL-BAQARAH · {m.ayah.key}</div>
+            <div style={{fontSize: 26, color: '#5b6a60', letterSpacing: 2}}>SURAH {ayat[m.ayah.key].surah.toUpperCase()} · {m.ayah.key}</div>
             <div style={{fontFamily: QURAN_FONT, fontSize: 52, lineHeight: 1.9, color: '#24503a', direction: 'rtl'}}>{ayat[m.ayah.key].words.slice(m.ayah.range[0], m.ayah.range[1] + 1).join(' ')}</div>
             <div style={{fontSize: 38, lineHeight: 1.2}}>“{gold(m.ayah.tr)}”</div>
           </div>

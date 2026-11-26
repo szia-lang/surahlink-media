@@ -50,6 +50,8 @@ When the owner says "just make them", don't ask for confirmation: pick ideas, wr
   1 Bismillah = word-by-word breakdown (narrated), 2 FourAyat = numbered "save this" list (narrated), 3 Quiz = 3-question quiz with timer
   (silent + nasheed), 4 Texts = text-message story (silent + nasheed), 5 FearNot = aesthetic ayah word-by-word reveal (silent + nasheed).
   Format pieces: `src/stories8/formats.tsx` (QuizCard, Chat, WordReveal). New sfx: pop, tick, ding. Record which format wins.
+- Nov 26: same 5 formats again with new content (second data point per format), files 2026-11-26 - 1..5:
+  1 Hamd (word breakdown), 2 Duas (save-this list), 3 Quiz2, 4 Texts2, 5 RememberMe (aesthetic ayah).
 - ONE version per video with ONE hook. Never make hook variants or A/B/C versions of the same video (owner's rule). The old PoorA/B/C, YunusA/B/C compositions are retired.
 
 ## File naming (every video sent to the owner)
@@ -69,13 +71,13 @@ Understand what you recite with SuraLink, link in bio.
 ## Workflow the owner expects
 1. Pitch 5 ideas (story + hook) -> owner picks.
 2. Write scripts and show them FIRST -> owner approves.
-3. Generate narration (1 take), process, transcribe, build, render a few still frames to check, then render the full video.
+3. Price narration with `estimate_only` first (stay <= 500 credits), generate it (1 take), process, transcribe, build, render a few still frames to check, then render the full video.
 4. Send the video, then a short caption in the format above.
 5. Commit and push to the `video-studio` branch.
 
 ## Compositions (ids for `remotion render`)
 AlFil, GogMagog, Ibrahim, Musa, Kursi, Abasa, Duha, Kahf, Yusuf, Nuh, Maryam, Kawthar, Ikhlas, Kursi2,
-Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, Bismillah, FourAyat, Quiz, Texts, FearNot, EndCard, AmirSheet.
+Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, Bismillah, FourAyat, Quiz, Texts, FearNot, Hamd, Duas, Quiz2, Texts2, RememberMe, EndCard, AmirSheet.
 Khidr and Cave are silent (text-only, sound effects): a cheaper format when credits are low.
 
 ## Scheduling in Meta Business Suite
