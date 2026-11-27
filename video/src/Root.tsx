@@ -52,6 +52,11 @@ import {Duas, DUA_DURATION} from './stories8/Duas';
 import {Quiz2, QZ2_DURATION} from './stories8/Quiz2';
 import {Texts2, TX2_DURATION} from './stories8/Texts2';
 import {RememberMe, RM_DURATION} from './stories8/RememberMe';
+import {Ant, AN_DURATION} from './stories9/Ant';
+import {Hoopoe, HP_DURATION} from './stories9/Hoopoe';
+import {SeaSplit, SS_DURATION} from './stories9/SeaSplit';
+import {Idols, ID_DURATION} from './stories9/Idols';
+import {Zamzam, ZZ_DURATION} from './stories9/Zamzam';
 import {PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, HOOK_DURATIONS} from './hooks/HookTests';
 
 // 1080x1920 = vertical format for Reels / TikTok / Shorts
@@ -113,6 +118,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Quiz2" component={Quiz2} durationInFrames={Math.round(QZ2_DURATION * 60)} fps={60} width={1080} height={1920} />
     <Composition id="Texts2" component={Texts2} durationInFrames={Math.round(TX2_DURATION * 60)} fps={60} width={1080} height={1920} />
     <Composition id="RememberMe" component={RememberMe} durationInFrames={Math.round(RM_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Ant" component={Ant} durationInFrames={Math.round(AN_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Hoopoe" component={Hoopoe} durationInFrames={Math.round(HP_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="SeaSplit" component={SeaSplit} durationInFrames={Math.round(SS_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Idols" component={Idols} durationInFrames={Math.round(ID_DURATION * 60)} fps={60} width={1080} height={1920} />
+    <Composition id="Zamzam" component={Zamzam} durationInFrames={Math.round(ZZ_DURATION * 60)} fps={60} width={1080} height={1920} />
     <Composition id="YunusA" component={YunusA} durationInFrames={Math.round(HOOK_DURATIONS.YunusA * 60)} fps={60} width={1080} height={1920} />
     <Composition id="YunusB" component={YunusB} durationInFrames={Math.round(HOOK_DURATIONS.YunusB * 60)} fps={60} width={1080} height={1920} />
     <Composition id="YunusC" component={YunusC} durationInFrames={Math.round(HOOK_DURATIONS.YunusC * 60)} fps={60} width={1080} height={1920} />

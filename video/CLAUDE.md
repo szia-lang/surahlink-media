@@ -52,6 +52,9 @@ When the owner says "just make them", don't ask for confirmation: pick ideas, wr
   Format pieces: `src/stories8/formats.tsx` (QuizCard, Chat, WordReveal). New sfx: pop, tick, ding. Record which format wins.
 - Nov 26: same 5 formats again with new content (second data point per format), files 2026-11-26 - 1..5:
   1 Hamd (word breakdown), 2 Duas (save-this list), 3 Quiz2, 4 Texts2, 5 RememberMe (aesthetic ayah).
+- Nov 27 (owner: more visuals, curiosity/question hooks, each different), files 2026-11-27 - 1..5, scenes in `src/stories9/kit4.tsx`:
+  1 Ant ("why" mystery), 2 Hoopoe (cliffhanger + "what happened next?"), 3 SeaSplit ("what would YOU do?", 3 cuts in 4 s),
+  4 Idols (riddle + "pause and guess"), 5 Zamzam ("do you know why?"). Cut every 2-3 s, crowds, parallax, particles, camera punches.
 - ONE version per video with ONE hook. Never make hook variants or A/B/C versions of the same video (owner's rule). The old PoorA/B/C, YunusA/B/C compositions are retired.
 
 ## File naming (every video sent to the owner)
@@ -77,7 +80,7 @@ Understand what you recite with SuraLink, link in bio.
 
 ## Compositions (ids for `remotion render`)
 AlFil, GogMagog, Ibrahim, Musa, Kursi, Abasa, Duha, Kahf, Yusuf, Nuh, Maryam, Kawthar, Ikhlas, Kursi2,
-Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, Bismillah, FourAyat, Quiz, Texts, FearNot, Hamd, Duas, Quiz2, Texts2, RememberMe, EndCard, AmirSheet.
+Dajjal, Pharaoh, Mulk, Poor, Yunus, PoorA, PoorB, PoorC, YunusA, YunusB, YunusC, Habil, Qarun, Khidr, Cave, Night, Fatiha, Masad, Baqarah, Kafirun, Nasr, Zumar, Sharh, Takathur, Qadr, Cry, ZakariyaDua, Umar, MaryamFact, WestSunrise, Bismillah, FourAyat, Quiz, Texts, FearNot, Hamd, Duas, Quiz2, Texts2, RememberMe, Ant, Hoopoe, SeaSplit, Idols, Zamzam, EndCard, AmirSheet.
 Khidr and Cave are silent (text-only, sound effects): a cheaper format when credits are low.
 
 ## Scheduling in Meta Business Suite
